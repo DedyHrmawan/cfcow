@@ -1,0 +1,2 @@
+# cfcow
+ Sistem Pakar Sapi
