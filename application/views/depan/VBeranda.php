@@ -102,4 +102,4 @@
     </div>
 </div>
 
-<?php $this->load->view('admin/template/footer') ?>
+<?php $this->load->view('depan/template/footer') ?>

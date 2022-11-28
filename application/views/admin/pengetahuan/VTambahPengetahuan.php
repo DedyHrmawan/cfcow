@@ -10,7 +10,7 @@
                         <br>
                         <div class="row">
                             <div class="col">
-                                <p><b>1.0</b> (Pasti Ya)</p>
+                                <p><b>1.0</b> (Pasti)</p>
                                 <p><b>0.8</b> (Hampir Pasti)</p>
                                 <p><b>0.6</b> (Kemungkinan Besar)</p>
                             </div>
@@ -83,4 +83,4 @@
     </div>
 </div>
 
-<?php $this->load->view('template/footer') ?>
+<?php $this->load->view('admin/template/footer') ?>

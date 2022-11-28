@@ -19,11 +19,12 @@ class Welcome extends CI_Controller
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/userguide3/general/urls.html
 	 */
+
 	// admin 
-	public function Beranda()
+	public function Home()
 	{
 		$data = array(
-			'title' => 'Beranda - Sistem Pakar Sapi'
+			'title' => 'Home - Sistem Pakar Sapi'
 		);
 		$this->template->admin('admin/VBeranda', $data);
 	}
@@ -82,5 +83,50 @@ class Welcome extends CI_Controller
 			'title' => 'Post Keterangan - Sistem Pakar Sapi'
 		);
 		$this->template->admin('admin/VPostKeterangan', $data);
+	}
+
+	public function UbahPassword()
+	{
+		$data = array(
+			'title' => 'Ubah Password - Sistem Pakar Sapi'
+		);
+		$this->template->admin('admin/VUbahPassword', $data);
+	}
+
+	//depan
+	public function Beranda()
+	{
+		$data = array(
+			'title' => 'Beranda - Sistem Pakar Sapi'
+		);
+		$this->template->depan('depan/VBeranda', $data);
+	}
+	public function Diagnosa()
+	{
+		$data = array(
+			'title' => 'Diagnosa - Sistem Pakar Sapi'
+		);
+		$this->template->depan('depan/VDiagnosa', $data);
+	}
+	public function Riwayat()
+	{
+		$data = array(
+			'title' => 'Riwayat - Sistem Pakar Sapi'
+		);
+		$this->template->depan('depan/VRiwayat', $data);
+	}
+	public function Keterangan()
+	{
+		$data = array(
+			'title' => 'Keterangan - Sistem Pakar Sapi'
+		);
+		$this->template->depan('depan/VKeterangan', $data);
+	}
+	public function DetailRiwayat()
+	{
+		$data = array(
+			'title' => 'Detail Riwayat - Sistem Pakar Sapi'
+		);
+		$this->template->depan('depan/VDetailRiwayat', $data);
 	}
 }
