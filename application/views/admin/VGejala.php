@@ -152,7 +152,7 @@
 		</div>
 	</div>
     
-    <?php $this->load->view('template/footer') ?>
+    <?php $this->load->view('admin/template/footer') ?>
     <script>
     $('#tabelGejala').dataTable({
         "language": {

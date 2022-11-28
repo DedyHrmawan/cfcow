@@ -10,7 +10,7 @@
                         <br>
                         <div class="row">
                             <div class="col">
-                                <p><b>1.0</b> (Pasti Ya)</p>
+                                <p><b>1.0</b> (Pasti)</p>
                                 <p><b>0.8</b> (Hampir Pasti)</p>
                                 <p><b>0.6</b> (Kemungkinan Besar)</p>
                             </div>
@@ -62,7 +62,7 @@
                             <label for="exampleFormControlInput1" class="required form-label">MB</label>
                         </div>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" placeholder="Masukan MB" required/>
+                            <input type="text" class="form-control" value="0.8" required/>
                         </div>
                     </div>
                     <div class="form-group row mt-4">
@@ -70,7 +70,7 @@
                             <label for="exampleFormControlInput1" class="required form-label">MD</label>
                         </div>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" placeholder="Masukan MD" required/>
+                            <input type="text" class="form-control" value="0.2" required/>
                         </div>
                     </div>
                     <div class="mt-5 text-center">
@@ -83,4 +83,4 @@
     </div>
 </div>
 
-<?php $this->load->view('template/footer') ?>
+<?php $this->load->view('admin/template/footer') ?>

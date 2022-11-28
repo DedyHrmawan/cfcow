@@ -12,7 +12,7 @@
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="article" />
     <meta property="og:title" content="CFCOW - Sistem Pakar Sapi" />
-    <link rel="shortcut icon" href="<?= base_url(); ?>assets/media/logos/favicon.ico" />
+    <link rel="shortcut icon" href="<?= base_url(); ?>assets/media/logos/sapi.png" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
 
     <!--begin::Global Stylesheets Bundle(used by all pages)-->
@@ -25,6 +25,9 @@
 
     <link href="<?= base_url(); ?>assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
     <script src="<?= base_url(); ?>assets/plugins/global/plugins.bundle.js"></script>
+
+    <!-- apexchart js  -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 </head>
 
 <body id="kt_body" class="header-fixed header-tablet-and-mobile-fixed toolbar-enabled toolbar-fixed aside-enabled aside-fixed" style="--kt-toolbar-height:55px;--kt-toolbar-height-tablet-and-mobile:55px">
@@ -48,7 +51,7 @@
                 <div class="aside-menu flex-column-fluid">
                     <!--begin::Aside Menu-->
                     <div class="hover-scroll-overlay-y my-5 my-lg-5" id="kt_aside_menu_wrapper" data-kt-scroll="true" data-kt-scroll-activate="{default: false, lg: true}" data-kt-scroll-height="auto" data-kt-scroll-dependencies="#kt_aside_logo, #kt_aside_footer" data-kt-scroll-wrappers="#kt_aside_menu" data-kt-scroll-offset="0">
-                        <?php $this->load->view('template/menu'); ?>
+                        <?php $this->load->view('depan/template/menu'); ?>
                     </div>
                 </div>
             </div>

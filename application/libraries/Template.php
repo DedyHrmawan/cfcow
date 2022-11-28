@@ -8,7 +8,12 @@ class Template
     }
     
     function admin($content, $data = null){
-        $this->_ci->load->view('template/header', $data); // Header
+        $this->_ci->load->view('admin/template/header', $data); // Header
+        $this->_ci->load->view($content, $data); // Content
+    }
+
+    function depan($content, $data = null){
+        $this->_ci->load->view('depan/template/header', $data); // Header
         $this->_ci->load->view($content, $data); // Content
     }
 }
