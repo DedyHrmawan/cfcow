@@ -30,7 +30,7 @@
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 </head>
 
-<body id="kt_body" class="header-fixed header-tablet-and-mobile-fixed toolbar-enabled toolbar-fixed aside-enabled aside-fixed" style="--kt-toolbar-height:55px;--kt-toolbar-height-tablet-and-mobile:55px">
+<body id="kt_body" data-kt-aside-minimize="on" class="header-fixed header-tablet-and-mobile-fixed toolbar-enabled toolbar-fixed aside-enabled aside-fixed" style="--kt-toolbar-height:55px;--kt-toolbar-height-tablet-and-mobile:55px">
     <div class="d-flex flex-column flex-root">
         <div class="page d-flex flex-row flex-column-fluid">
             <div id="kt_aside" class="aside aside-dark aside-hoverable" data-kt-drawer="true" data-kt-drawer-name="aside" data-kt-drawer-activate="{default: true, lg: false}" data-kt-drawer-overlay="true" data-kt-drawer-width="{default:'200px', '300px': '250px'}" data-kt-drawer-direction="start" data-kt-drawer-toggle="#kt_aside_mobile_toggle">
@@ -96,3 +96,38 @@
                         </div>
                     </div>
                 </div>
+                <div class="post d-flex flex-column-fluid mt-1" id="kt_post">
+                    <div id="kt_content_container" class="container-xxl">
+                        <div class=" mb-5 mt-n10 mb-xl-8">
+                            <div class=" py-3">
+                                <div class="w-lg-500px bg-body rounded shadow-sm p-10 p-lg-15 mx-auto">
+                                    <form class="form w-100" novalidate="novalidate" id="kt_sign_in_form" data-kt-redirect-url="../../demo1/dist/index.html" action="#">
+                                        <div class="text-center mb-10">
+                                            <h1 class="text-dark mb-3">Login Pakar</h1>
+                                            <div class="text-gray-400 fw-bold fs-4">Ingin mendaftar ?
+                                                <a href="<?= site_url('')?>" class="link-primary fw-bolder">Ajukan Permohonan</a>
+                                            </div>
+                                        </div>
+                                        <div class="fv-row mb-10">
+                                            <label class="form-label fs-6 fw-bolder text-dark">Username</label>
+                                            <input class="form-control form-control-lg form-control-solid" type="text" name="" placeholder="Masukan Username" autocomplete="off" />
+                                        </div>
+                                        <div class="fv-row mb-10">
+                                            <div class="d-flex flex-stack mb-2">
+                                                <label class="form-label fw-bolder text-dark fs-6 mb-0">Password</label>
+                                            </div>
+                                            <input class="form-control form-control-lg form-control-solid" type="password" name="" placeholder="Masukan Password" autocomplete="off" />
+                                        </div>
+                                        <div class="text-center">
+                                            <button type="submit" id="kt_sign_in_submit" class="btn btn-lg btn-primary w-100 mb-5">
+                                                <span class="indicator-label">Login</span>
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <?php $this->load->view('depan/template/footer') ?>

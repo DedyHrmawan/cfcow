@@ -129,4 +129,11 @@ class Welcome extends CI_Controller
 		);
 		$this->template->depan('depan/VDetailRiwayat', $data);
 	}
+	public function Login()
+	{
+		$data = array(
+			'title' => 'Login - Sistem Pakar Sapi'
+		);
+		$this->load->view('depan/VLogin', $data);
+	}
 }
