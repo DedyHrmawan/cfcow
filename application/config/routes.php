@@ -70,3 +70,4 @@ $route['diagnosa']              = 'Welcome/Diagnosa';
 $route['riwayat']               = 'Welcome/Riwayat';
 $route['keterangan']            = 'Welcome/Keterangan';
 $route['detailriwayat']         = 'Welcome/DetailRiwayat';
+$route['login']                 = 'Welcome/Login';
