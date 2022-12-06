@@ -24,6 +24,7 @@
                 </div>
                 <br>
                 <div class="separator"></div>
+                <form action="<?= site_url('diagnosa/hitung') ?>" method="post">
                 <table class="table rounded table-rounded table-striped table-row-gray-300 align-middle gs-0 gy-3" id="tabelDiagnosa">
                     <thead class="bg-secondary">
                         <tr class="fw-bolder fs-5 text-dark border-bottom border-gray-200">
@@ -34,59 +35,47 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td class="text-dark text-center text-hover-primary fs-6">
-                                1
-                            </td>
-                            <td class="text-dark text-center text-hover-primary fs-6">
-                                G001
-                            </td>
-                            <td class="text-dark text-hover-primary fs-6">
-                                Nafsu Makan Berkurang
-                            </td>
-                            <td class="text-end col-3">
-                                <select class="form-select" data-control="select2" data-placeholder="Pilih jika sesuai !" required>
-                                    <option></option>
-                                    <option value="">Pasti</option>
-                                    <option value="">Hampir Pasti</option>
-                                    <option value="">Kemungkinan Besar</option>
-                                    <option value="">Mungkin</option>
-                                    <option value="">Hampir Mungkin</option>
-                                    <option value="">Tidak Tahu atau Tidak Yakin</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="text-dark text-center text-hover-primary fs-6">
-                                1
-                            </td>
-                            <td class="text-dark text-center text-hover-primary fs-6">
-                                G001
-                            </td>
-                            <td class="text-dark text-hover-primary fs-6">
-                                Nafsu Makan Berkurang
-                            </td>
-                            <td class="text-end col-3">
-                                <select class="form-select" data-control="select2" data-placeholder="Pilih jika sesuai !" required>
-                                    <option></option>
-                                    <option value="">Pasti</option>
-                                    <option value="">Hampir Pasti</option>
-                                    <option value="">Kemungkinan Besar</option>
-                                    <option value="">Mungkin</option>
-                                    <option value="">Hampir Mungkin</option>
-                                    <option value="">Tidak Tahu atau Tidak Yakin</option>
-                                </select>
-                            </td>
-                        </tr>
+                        <?php
+                            $no = 1 ;
+                            foreach($gejala as $item){
+                                echo '
+                                <tr>
+                                    <td class="text-dark text-center text-hover-primary fs-6">
+                                        '.$no.'
+                                    </td>
+                                    <td class="text-dark text-center text-hover-primary fs-6">
+                                        G'.str_pad($item->kode_gejala, 3, '0', STR_PAD_LEFT).'
+                                    </td>
+                                    <td class="text-dark text-hover-primary fs-6">
+                                        '.$item->nama_gejala.'
+                                    </td>
+                                    <td class="text-end col-3">
+                                        <select class="form-select" name="kondisi[]" required>
+                                            <option value="0">Pilih jika sesuai</option>
+                                ';
+                                foreach ($kondisi as $list) {
+                                    echo '
+                                            <option value="'.$item->kode_gejala.'_'.$list->id.'">'.$list->kondisi.'</option>
+                                        ';
+                                };
+                                echo'
+                                        </select>                                        
+                                    </td>
+                                </tr>
+                                ';
+                                $no++;
+                            }
+                        ?>
                     </tbody>
                 </table>
-                <button type="button" class="btn btn-primary btn-icon btn-circle p-10" style="position: fixed; bottom: 40px; right: 30px;" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-dismiss="click" title="Klik disini untuk melihat hasil !">
+                <button type="submit" class="btn btn-primary btn-icon btn-circle p-10" style="position: fixed; bottom: 40px; right: 30px;" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-dismiss="click" title="Klik disini untuk melihat hasil !">
                     <span class="svg-icon svg-icon-white svg-icon-2x">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <rect opacity="0.5" x="17.0365" y="15.1223" width="8.15546" height="2" rx="1" transform="rotate(45 17.0365 15.1223)" fill="currentColor" />
                             <path d="M11 19C6.55556 19 3 15.4444 3 11C3 6.55556 6.55556 3 11 3C15.4444 3 19 6.55556 19 11C19 15.4444 15.4444 19 11 19ZM11 5C7.53333 5 5 7.53333 5 11C5 14.4667 7.53333 17 11 17C14.4667 17 17 14.4667 17 11C17 7.53333 14.4667 5 11 5Z" fill="currentColor" />
                         </svg>
                 </button>
+                </form>
             </div>
         </div>
     </div>
@@ -95,18 +84,13 @@
 <?php $this->load->view('depan/template/footer') ?>
 <script>
     $('#tabelDiagnosa').dataTable({
+        paging: false,
+        ordering: false,
+        info: false,
         "language": {
-            "lengthMenu": "Tampilkan _MENU_",
             "zeroRecords": "Tidak ada data",
-            "info": "Menampilkan _PAGE_ dari _PAGES_ Halaman",
             "infoEmpty": "Tidak ada data",
-            "infoFiltered": "(filtered from _MAX_ total records)",
             "search": "Cari",
-            "paginate": {
-                "previous": "Sebelumnya",
-                "next": "Selanjutnya"
-            },
-
         },
         "dom": "<'row'" +
             "<'col-sm-6 d-flex align-items-center justify-content-start'l>" +

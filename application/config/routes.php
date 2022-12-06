@@ -49,25 +49,69 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-$route['default_controller'] = 'Welcome/Beranda';
+$route['default_controller'] = 'BerandaController/Beranda';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
-//admin
-$route['home']             = 'Welcome/home';
-$route['admin']               = 'Welcome/Admin';
-$route['penyakit']            = 'Welcome/Penyakit';
-$route['gejala']              = 'Welcome/Gejala';
-$route['pengetahuan']                   = 'Welcome/Pengetahuan';
-$route['tambah_pengetahuan']            = 'Welcome/Tambah_Pengetahuan';
-$route['edit_pengetahuan']              = 'Welcome/Edit_Pengetahuan';
-$route['postketerangan']                = 'Welcome/PostKeterangan';
-$route['ubahpassword']                  = 'Welcome/UbahPassword';
+//ADMIN
+//Admin Pakar
+$route['admin']               = 'AdminController/Admin';
+$route['admin/tambah']        = 'AdminController/store';
+$route['admin/edit']          = 'AdminController/edit';
+$route['admin/hapus']         = 'AdminController/delete';
+$route['admin/ajxGet']        = 'AdminController/ajxGet';
 
-//depan
-$route['beranda']               = 'Welcome/Beranda';
-$route['diagnosa']              = 'Welcome/Diagnosa';
-$route['riwayat']               = 'Welcome/Riwayat';
-$route['keterangan']            = 'Welcome/Keterangan';
-$route['detailriwayat']         = 'Welcome/DetailRiwayat';
+//Penyakit
+$route['penyakit']            = 'PenyakitController/Penyakit';
+$route['penyakit/tambah']     = 'PenyakitController/store';
+$route['penyakit/edit']       = 'PenyakitController/edit';
+$route['penyakit/hapus']      = 'PenyakitController/delete';
+$route['penyakit/ajxGet']     = 'PenyakitController/ajxGet';
+
+//Gejala
+$route['gejala']              = 'GejalaController/Gejala';
+$route['gejala/tambah']       = 'GejalaController/store';
+$route['gejala/edit']         = 'GejalaController/edit';
+$route['gejala/hapus']        = 'GejalaController/delete';
+$route['gejala/ajxGet']       = 'GejalaController/ajxGet';
+
+//Post Keterangan
+$route['postketerangan']              = 'KeteranganController/PostKeterangan';
+$route['postketerangan/tambah']       = 'KeteranganController/store';
+$route['postketerangan/edit']         = 'KeteranganController/edit';
+$route['postketerangan/hapus']        = 'KeteranganController/delete';
+$route['postketerangan/ajxGet']       = 'KeteranganController/ajxGet';
+
+//Pengetahuan
+$route['pengetahuan']                   = 'PengetahuanController/Pengetahuan';
+$route['tambah_pengetahuan']            = 'PengetahuanController/Tambah_Pengetahuan';
+$route['edit_pengetahuan/(:any)']       = 'PengetahuanController/Edit_Pengetahuan/$1';
+$route['pengetahuan/tambah']            = 'PengetahuanController/store';
+$route['pengetahuan/edit']              = 'PengetahuanController/edit';
+$route['pengetahuan/hapus']             = 'PengetahuanController/delete';
+
+//HOME
+$route['home']             = 'HomeController/home';
+
+//DEPAN
+//BERANDA
+$route['beranda']               = 'BerandaController/Beranda';
+
+//Keterangan
+$route['keterangan']            = 'PostController/Keterangan';
+$route['keterangan/ajxGet']     = 'PostController/ajxGet';
+
+//DIAGNOSA
+$route['diagnosa']              = 'DiagnosaController/Diagnosa';
+$route['diagnosa/hitung']       = 'DiagnosaController/hitung';
+
+//RIWAYAT
+$route['riwayat']               = 'RiwayatController/Riwayat';
+$route['detailriwayat/(:any)']  = 'RiwayatController/DetailRiwayat/$1';
+
+//LOGIN
 $route['login']                 = 'Welcome/Login';
+$route['login/auth']            = 'AuthController/auth';
+$route['logout']                = 'AuthController/logout';
+$route['updatePassword']        = 'AuthController/ubahPassword';
+$route['ubahpassword']     = 'Welcome/UbahPassword';

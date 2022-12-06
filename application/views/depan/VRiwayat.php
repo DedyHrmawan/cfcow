@@ -20,23 +20,33 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td class="text-dark text-center text-hover-primary fs-6">
-                                                1
-                                            </td>
-                                            <td class="text-dark text-center text-hover-primary fs-6">
-                                                01 Jan 2022
-                                            </td>
-                                            <td class="text-dark text-hover-primary fs-6">
-                                                Jembrana
-                                            </td>
-                                            <td class="text-center">
-                                                <span class="badge badge-secondary">0.648</span>
-                                            </td>
-                                            <td class="text-center">
-                                                <a href="<?php echo site_url('detailriwayat'); ?>" class="btn btn-sm fs-8 btn-primary bs-xs"><i class="fonticon-sun"></i>Detail</a>
-                                            </td>
-                                        </tr>
+                                        <?php
+                                            $no = 1 ;
+                                            foreach($riwayat as $item){
+                                                $newDate = date("d M Y", strtotime($item->tanggal));
+                                                $link = site_url('detailriwayat/'.$item->id_hasil);
+                                                echo '
+                                                <tr>
+                                                    <td class="text-dark text-center text-hover-primary fs-6">
+                                                        '.$no.'
+                                                    </td>
+                                                    <td class="text-dark text-center text-hover-primary fs-6">
+                                                        '.$newDate.'
+                                                    </td>
+                                                    <td class="text-dark text-hover-primary fs-6">
+                                                        '.$item->nama_penyakit.'
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <span class="badge badge-secondary">'.$item->hasil_nilai.'</span>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <a href="'.$link.'" class="btn btn-sm fs-8 btn-primary bs-xs"><i class="fonticon-sun"></i>Detail</a>
+                                                    </td>
+                                                </tr>
+                                                ';
+                                                $no++;
+                                            }   
+                                        ?>                                        
                                     </tbody>
                                 </table>
                             </div>
@@ -57,6 +67,19 @@
 </div>
 
 <?php $this->load->view('depan/template/footer') ?>
+<?php 
+    $listPenyakit = [];
+    foreach ($dataChart as $items) {
+        $listPenyakit[] = $items->nama_penyakit;
+    };
+    $listPenyakit = json_encode($listPenyakit);    
+
+    $listTotal = [];
+    foreach ($dataChart as $items) {
+        $listTotal[] = (int) $items->total;
+    };
+    $listTotal = json_encode($listTotal);
+?>
 <script>
     var pieSimpleChart = {
         chart: {
@@ -71,8 +94,8 @@
             horizontalAlign: 'left',
 
         },
-        series: [44, 55, 41, 17],
-        labels: ["Penyakit 1", "Penyakit 1", "Penyakit 1", "Penyakit 1"],
+        series: <?= $listTotal ?>,
+        labels: <?= $listPenyakit ?>,
     }
 
     var chart = new ApexCharts(document.querySelector("#donutChart"), pieSimpleChart);

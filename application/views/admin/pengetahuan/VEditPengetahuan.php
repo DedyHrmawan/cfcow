@@ -32,16 +32,25 @@
                     </div>
                 </div>
                 <br>
-                <form>
+                <form action="<?= site_url('pengetahuan/edit') ?>" method="post">
                     <div class="form-group row mt-4">
                         <div class="col align-items-center mt-4">
                             <label for="exampleFormControlInput1" class="required form-label">Penyakit</label>
                         </div>
                         <div class="col-sm-10">
-                            <select class="form-select" data-control="select2" data-placeholder="Silahkan Pilih Penyakit" required>
+                            <select class="form-select" name="kode_penyakit" data-control="select2" data-placeholder="Silahkan Pilih Penyakit" required>
                                 <option></option>
-                                <option value="1">Penyakit 1</option>
-                                <option value="2">Penyakit 2</option>
+                                <?php
+                                    foreach ($penyakit as $list) {
+                                        $selected = '';
+                                        if($list->kode_penyakit == $pengetahuan[0]->kode_penyakit){
+                                            $selected = "selected";
+                                        }
+                                        echo '
+                                                <option value="'.$list->kode_penyakit.'" '.$selected.'>'.$list->nama_penyakit.'</option>
+                                            ';
+                                    }
+                                ?>
                             </select>
                         </div>
                     </div>
@@ -50,10 +59,19 @@
                             <label for="exampleFormControlInput1" class="required form-label">Gejala</label>
                         </div>
                         <div class="col-sm-10">
-                            <select class="form-select" data-control="select2" data-placeholder="Silahkan Pilih Gejala" required>
+                            <select class="form-select" name="kode_gejala" data-control="select2" data-placeholder="Silahkan Pilih Gejala" required>
                                 <option></option>
-                                <option value="1">Gejala 1</option>
-                                <option value="2">Gejala 2</option>
+                                <?php
+                                    foreach ($gejala as $list) {
+                                        $selected = '';
+                                        if($list->kode_gejala == $pengetahuan[0]->kode_gejala){
+                                            $selected = "selected";
+                                        }
+                                        echo '
+                                                <option value="'.$list->kode_gejala.'" '.$selected.'>'.$list->nama_gejala.'</option>
+                                            ';
+                                    }
+                                ?>
                             </select>
                         </div>
                     </div>
@@ -62,7 +80,7 @@
                             <label for="exampleFormControlInput1" class="required form-label">MB</label>
                         </div>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" value="0.8" required/>
+                            <input type="text" name="mb" class="form-control" value="<?= $pengetahuan[0]->mb ?>" required/>
                         </div>
                     </div>
                     <div class="form-group row mt-4">
@@ -70,10 +88,11 @@
                             <label for="exampleFormControlInput1" class="required form-label">MD</label>
                         </div>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" value="0.2" required/>
+                            <input type="text" name="md" class="form-control" value="<?= $pengetahuan[0]->md ?>" required/>
                         </div>
                     </div>
                     <div class="mt-5 text-center">
+                        <input type="hidden" name="kode_pengetahuan" value="<?= $pengetahuan[0]->kode_pengetahuan ?>">
                         <button type="submit" class="btn btn-primary me-3">Simpan</button>
                         <a href="javascript:window.history.go(-1);" type="button" class="btn btn-danger" >Batal</a>
                     </div>
