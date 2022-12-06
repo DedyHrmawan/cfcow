@@ -32,16 +32,21 @@
                     </div>
                 </div>
                 <br>
-                <form>
+                <form action="<?= site_url('pengetahuan/tambah') ?>" method="post">
                     <div class="form-group row mt-4">
                         <div class="col align-items-center mt-4">
                             <label for="exampleFormControlInput1" class="required form-label">Penyakit</label>
                         </div>
-                        <div class="col-sm-10">
-                            <select class="form-select" data-control="select2" data-placeholder="Silahkan Pilih Penyakit" required>
+                        <div class="col-sm-10">                            
+                            <select class="form-select" name="kode_penyakit" data-control="select2" data-placeholder="Silahkan Pilih Penyakit" required>
                                 <option></option>
-                                <option value="1">Penyakit 1</option>
-                                <option value="2">Penyakit 2</option>
+                                <?php
+                                    foreach ($penyakit as $list) {
+                                        echo '
+                                                <option value="'.$list->kode_penyakit.'">'.$list->nama_penyakit.'</option>
+                                            ';
+                                    }
+                                ?>
                             </select>
                         </div>
                     </div>
@@ -50,10 +55,15 @@
                             <label for="exampleFormControlInput1" class="required form-label">Gejala</label>
                         </div>
                         <div class="col-sm-10">
-                            <select class="form-select" data-control="select2" data-placeholder="Silahkan Pilih Gejala" required>
+                            <select class="form-select" name="kode_gejala" data-control="select2" data-placeholder="Silahkan Pilih Gejala" required>
                                 <option></option>
-                                <option value="1">Gejala 1</option>
-                                <option value="2">Gejala 2</option>
+                                <?php
+                                    foreach ($gejala as $list) {
+                                        echo '
+                                                <option value="'.$list->kode_gejala.'">'.$list->nama_gejala.'</option>
+                                            ';
+                                    }
+                                ?>
                             </select>
                         </div>
                     </div>
@@ -62,7 +72,7 @@
                             <label for="exampleFormControlInput1" class="required form-label">MB</label>
                         </div>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" placeholder="Masukan MB" required/>
+                            <input type="text" class="form-control" placeholder="Masukan MB" name="mb" required/>
                         </div>
                     </div>
                     <div class="form-group row mt-4">
@@ -70,7 +80,7 @@
                             <label for="exampleFormControlInput1" class="required form-label">MD</label>
                         </div>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" placeholder="Masukan MD" required/>
+                            <input type="text" class="form-control" placeholder="Masukan MD" name="md" required/>
                         </div>
                     </div>
                     <div class="mt-5 text-center">

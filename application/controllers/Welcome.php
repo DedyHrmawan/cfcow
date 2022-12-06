@@ -21,72 +21,11 @@ class Welcome extends CI_Controller
 	 */
 
 	// admin 
-	public function Home()
-	{
-		$data = array(
-			'title' => 'Home - Sistem Pakar Sapi'
-		);
-		$this->template->admin('admin/VBeranda', $data);
-	}
-
-	public function Admin()
-	{
-		$data = array(
-			'title' => 'Admin - Sistem Pakar Sapi'
-		);
-		$this->template->admin('admin/VAdminPakar', $data);
-	}
-
-	public function Penyakit()
-	{
-		$data = array(
-			'title' => 'Penyakit - Sistem Pakar Sapi'
-		);
-		$this->template->admin('admin/VPenyakit', $data);
-	}
-
-	public function Gejala()
-	{
-		$data = array(
-			'title' => 'Gejala - Sistem Pakar Sapi'
-		);
-		$this->template->admin('admin/VGejala', $data);
-	}
-
-	public function Pengetahuan()
-	{
-		$data = array(
-			'title' => 'Pengetahuan - Sistem Pakar Sapi'
-		);
-		$this->template->admin('admin/pengetahuan/VPengetahuan', $data);
-	}
-
-	public function Tambah_Pengetahuan()
-	{
-		$data = array(
-			'title' => 'Tambah Pengetahuan - Sistem Pakar Sapi'
-		);
-		$this->template->admin('admin/pengetahuan/VTambahPengetahuan', $data);
-	}
-	
-	public function Edit_Pengetahuan()
-	{
-		$data = array(
-			'title' => 'Edit Pengetahuan - Sistem Pakar Sapi'
-		);
-		$this->template->admin('admin/pengetahuan/VEditPengetahuan', $data);
-	}
-
-	public function PostKeterangan()
-	{
-		$data = array(
-			'title' => 'Post Keterangan - Sistem Pakar Sapi'
-		);
-		$this->template->admin('admin/VPostKeterangan', $data);
-	}
-
 	public function UbahPassword()
 	{
+		if (isset($_SESSION['logged_in']) == FALSE) {
+			redirect('/');
+		};
 		$data = array(
 			'title' => 'Ubah Password - Sistem Pakar Sapi'
 		);
@@ -94,43 +33,11 @@ class Welcome extends CI_Controller
 	}
 
 	//depan
-	public function Beranda()
-	{
-		$data = array(
-			'title' => 'Beranda - Sistem Pakar Sapi'
-		);
-		$this->template->depan('depan/VBeranda', $data);
-	}
-	public function Diagnosa()
-	{
-		$data = array(
-			'title' => 'Diagnosa - Sistem Pakar Sapi'
-		);
-		$this->template->depan('depan/VDiagnosa', $data);
-	}
-	public function Riwayat()
-	{
-		$data = array(
-			'title' => 'Riwayat - Sistem Pakar Sapi'
-		);
-		$this->template->depan('depan/VRiwayat', $data);
-	}
-	public function Keterangan()
-	{
-		$data = array(
-			'title' => 'Keterangan - Sistem Pakar Sapi'
-		);
-		$this->template->depan('depan/VKeterangan', $data);
-	}
-	public function DetailRiwayat()
-	{
-		$data = array(
-			'title' => 'Detail Riwayat - Sistem Pakar Sapi'
-		);
-		$this->template->depan('depan/VDetailRiwayat', $data);
-	}
 	public function Login()
-	{
+	{		
+        if (isset($_SESSION['logged_in']) == TRUE) {
+			redirect('home');
+		};
 		$data = array(
 			'title' => 'Login - Sistem Pakar Sapi'
 		);

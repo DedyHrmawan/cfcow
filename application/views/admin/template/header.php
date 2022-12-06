@@ -79,18 +79,18 @@
                                                     <img alt="Logo" src="assets/media/avatars/300-1.jpg" />
                                                 </div>
                                                 <div class="d-flex flex-column">
-                                                    <div class="fw-bolder d-flex align-items-center fs-5">Carl Hermawan
+                                                    <div class="fw-bolder d-flex align-items-center fs-5"><?= $_SESSION['nama_lengkap'] ?>
                                                     </div>
-                                                    <a href="#" class="fw-bold text-muted text-hover-primary fs-7">Pakar dari CFCOW</a>
+                                                    <a class="fw-bold text-muted text-hover-primary fs-7"><?= $_SESSION['username'] ?></a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="separator my-2"></div>
                                         <div class="menu-item px-5 my-1">
-                                            <a href="#" class="menu-link px-5">Tentang</a>
+                                            <a class="menu-link px-5">Tentang</a>
                                         </div>
                                         <div class="menu-item px-5">
-                                            <a href="#" class="menu-link px-5">Logout</a>
+                                            <a href="<?= site_url('logout') ?>" class="menu-link px-5">Logout</a>
                                         </div>
                                         <div class="separator my-2"></div>
                                     </div>
