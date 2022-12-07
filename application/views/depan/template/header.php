@@ -12,7 +12,7 @@
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="article" />
     <meta property="og:title" content="CFCOW - Sistem Pakar Sapi" />
-    <link rel="shortcut icon" href="<?= base_url(); ?>assets/media/logos/sapi.png" />
+    <link rel="shortcut icon" href="<?= base_url(); ?>assets/media/logos/cow-full-2.png" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
 
     <!--begin::Global Stylesheets Bundle(used by all pages)-->
@@ -30,13 +30,13 @@
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 </head>
 
-<body id="kt_body" class="header-fixed header-tablet-and-mobile-fixed toolbar-enabled toolbar-fixed aside-enabled aside-fixed" style="--kt-toolbar-height:55px;--kt-toolbar-height-tablet-and-mobile:55px">
+<body id="kt_body" <?= $this->uri->segment(1) == 'bantuan' ? 'data-kt-aside-minimize="on"' : '' ?> href="<?php echo site_url('bantuan'); ?>" <?= $this->uri->segment(1) == 'login' ? 'data-kt-aside-minimize="on"' : '' ?> href="<?php echo site_url('login'); ?>" class=" header-fixed header-tablet-and-mobile-fixed toolbar-enabled toolbar-fixed aside-enabled aside-fixed" style="--kt-toolbar-height:55px;--kt-toolbar-height-tablet-and-mobile:55px">
     <div class="d-flex flex-column flex-root">
         <div class="page d-flex flex-row flex-column-fluid">
             <div id="kt_aside" class="aside aside-dark aside-hoverable" data-kt-drawer="true" data-kt-drawer-name="aside" data-kt-drawer-activate="{default: true, lg: false}" data-kt-drawer-overlay="true" data-kt-drawer-width="{default:'200px', '300px': '250px'}" data-kt-drawer-direction="start" data-kt-drawer-toggle="#kt_aside_mobile_toggle">
                 <div class="aside-logo flex-column-auto" id="kt_aside_logo">
                     <a href="<?= site_url('beranda') ?>">
-                        <img alt="Logo" src="<?= base_url(); ?>assets/media/logos/logo-1-dark.svg" class="h-25px logo" />
+                        <img alt="Logo" src="<?= base_url(); ?>assets/media/logos/cow-full-1.png" class="h-200px mt-8 logo" />
                     </a>
                     <div id="kt_aside_toggle" class="btn btn-icon w-auto px-0 btn-active-color-primary aside-toggle" data-kt-toggle="true" data-kt-toggle-state="active" data-kt-toggle-target="body" data-kt-toggle-name="aside-minimize">
                         <!--begin::Svg Icon | path: icons/duotune/arrows/arr079.svg-->
@@ -73,7 +73,7 @@
                             <div class="d-flex align-items-stretch flex-shrink-0">
                                 <div class="d-flex align-items-center ms-1 ms-lg-3" id="kt_header_user_menu_toggle">
                                     <div class="card-toolbar m-1">
-                                        <a href="<?= site_url('') ?>" class="btn btn-primary ">
+                                        <a href="<?= site_url('bantuan') ?>" class="btn btn-warning ">
                                             <span class="svg-icon svg-icon-white svg-icon-2">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                                     <rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="currentColor" />
