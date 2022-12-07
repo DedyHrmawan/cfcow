@@ -64,20 +64,14 @@
                             </span>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row g-5 g-xl-8 mt-0">
                         <div class="tns tns-default">
-                            <div data-tns="true" data-tns-loop="true" data-tns-swipe-angle="false" data-tns-speed="2000" data-tns-autoplay="true" data-tns-autoplay-timeout="5000" data-tns-controls="true" data-tns-nav="false" data-tns-items="1" data-tns-center="false" data-tns-dots="false" data-tns-prev-button="#kt_team_slider_prev1" data-tns-next-button="#kt_team_slider_next1">
+                            <div data-tns="true" data-tns-loop="true" data-tns-swipe-angle="false" data-tns-speed="4000" data-tns-autoplay="true" data-tns-autoplay-timeout="7000" data-tns-controls="true" data-tns-nav="false" data-tns-items="1" data-tns-center="false" data-tns-dots="false" data-tns-prev-button="#kt_team_slider_prev1" data-tns-next-button="#kt_team_slider_next1">
                                 <div class="text-center px-5 pt-5 pt-lg-10 px-lg-10">
-                                    <img src="<?= base_url(); ?>assets/media/illustrations/dozzy-1/18.png" class="card-rounded shadow mw-100" alt="" />
+                                    <img src="<?= base_url(); ?>assets/media/illustrations/3.png" class="card-rounded shadow mw-100" alt="" />
                                 </div>
                                 <div class="text-center px-5 pt-5 pt-lg-10 px-lg-10">
-                                    <img src="<?= base_url(); ?>assets/media/illustrations/dozzy-1/18.png" class="card-rounded shadow mw-100" alt="" />
-                                </div>
-                                <div class="text-center px-5 pt-5 pt-lg-10 px-lg-10">
-                                    <img src="<?= base_url(); ?>assets/media/illustrations/dozzy-1/18.png" class="card-rounded shadow mw-100" alt="" />
-                                </div>
-                                <div class="text-center px-5 pt-5 pt-lg-10 px-lg-10">
-                                    <img src="<?= base_url(); ?>assets/media/illustrations/dozzy-1/18.png" class="card-rounded shadow mw-100" alt="" />
+                                    <img src="<?= base_url(); ?>assets/media/illustrations/2.png" class="card-rounded shadow mw-100" alt="" />
                                 </div>
                             </div>
                             <button class="btn btn-icon btn-active-color-primary" id="kt_team_slider_prev1">
@@ -94,6 +88,23 @@
                                     </svg>
                                 </span>
                             </button>
+                        </div>
+                    </div>
+                    <div class="row g-5 g-xl-8 mt-8 mx-0 text-center">
+                        <div class="col-xl-4">
+                            <img alt="Logo" src="<?= base_url(); ?>assets/media/logos/cow-head.png" class="h-100px logo"/>
+                            <p class="fs-4 fw-bold mt-5">Aplikasi Responsif</p>
+                            <p class="">Aplikasi sistem pakar ini dapat menyesuaikan ukuran perangkat anda, jadi walupun di akses melalui perangkat mobile tetap nyaman juga.</p>
+                        </div>
+                        <div class="col-xl-4">
+                            <img alt="Logo" src="<?= base_url(); ?>assets/media/logos/puzzle.png" class="h-100px logo"/>
+                            <p class="fs-4 fw-bold mt-5">Sahabat Peternak</p>
+                            <p class="">Sistem Pakar ini terus di sesuaikan perhitungan diagnosanya, supaya akurasi terhadap penyakit yang diderita lebih sesuai dan menjadi acuan peternak.</p>
+                        </div>
+                        <div class="col-xl-4">
+                            <img alt="Logo" src="<?= base_url(); ?>assets/media/logos/pakar.png" class="h-100px logo"/>
+                            <p class="fs-4 fw-bold mt-5">Admin Pakar</p>
+                            <p class="">Terdapat fitur admin pakar, untuk mengatur pengetahuan dan CF pakar, telah di sesuaikan tampilannya sehingga pakar bisa lebih mengeksplore aplikasi.</p>
                         </div>
                     </div>
                 </div>
