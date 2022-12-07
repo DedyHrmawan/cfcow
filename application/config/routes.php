@@ -115,3 +115,9 @@ $route['login/auth']            = 'AuthController/auth';
 $route['logout']                = 'AuthController/logout';
 $route['updatePassword']        = 'AuthController/ubahPassword';
 $route['ubahpassword']     = 'Welcome/UbahPassword';
+
+
+//BANTUAN
+$route['bantuan']     = 'Welcome/Bantuan';
+$route['tentang']     = 'Welcome/Tentang';
+$route['about']     = 'Welcome/About';

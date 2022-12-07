@@ -41,6 +41,32 @@ class Welcome extends CI_Controller
 		$data = array(
 			'title' => 'Login - Sistem Pakar Sapi'
 		);
-		$this->load->view('depan/VLogin', $data);
+		$this->template->depan('depan/VLogin', $data);
 	}
+
+	// bantuan 
+	public function Bantuan()
+	{		
+		$data = array(
+			'title' => 'Bantuan - Sistem Pakar Sapi'
+		);
+		$this->template->depan('depan/VBantuan', $data);
+	}
+
+	public function Tentang()
+	{		
+		$data = array(
+			'title' => 'Tentang - Sistem Pakar Sapi'
+		);
+		$this->template->admin('admin/VTentang', $data);
+	}
+
+	public function About()
+	{		
+		$data = array(
+			'title' => 'Tentang - Sistem Pakar Sapi'
+		);
+		$this->template->depan('depan/VAbout', $data);
+	}
+	
 }

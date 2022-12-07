@@ -12,7 +12,7 @@
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="article" />
     <meta property="og:title" content="CFCOW - Sistem Pakar Sapi" />
-    <link rel="shortcut icon" href="<?= base_url(); ?>assets/media/logos/favicon.ico" />
+    <link rel="shortcut icon" href="<?= base_url(); ?>assets/media/logos/cow-full-2.png" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
 
     <!--begin::Global Stylesheets Bundle(used by all pages)-->
@@ -33,7 +33,7 @@
             <div id="kt_aside" class="aside aside-dark aside-hoverable" data-kt-drawer="true" data-kt-drawer-name="aside" data-kt-drawer-activate="{default: true, lg: false}" data-kt-drawer-overlay="true" data-kt-drawer-width="{default:'200px', '300px': '250px'}" data-kt-drawer-direction="start" data-kt-drawer-toggle="#kt_aside_mobile_toggle">
                 <div class="aside-logo flex-column-auto" id="kt_aside_logo">
                     <a href="<?= site_url('home') ?>">
-                        <img alt="Logo" src="<?= base_url(); ?>assets/media/logos/logo-1-dark.svg" class="h-25px logo" />
+                        <img alt="Logo" src="<?= base_url(); ?>assets/media/logos/cow-full-1.png" class="h-200px mt-8 logo" />
                     </a>
                     <div id="kt_aside_toggle" class="btn btn-icon w-auto px-0 btn-active-color-primary aside-toggle" data-kt-toggle="true" data-kt-toggle-state="active" data-kt-toggle-target="body" data-kt-toggle-name="aside-minimize">
                         <!--begin::Svg Icon | path: icons/duotune/arrows/arr079.svg-->
