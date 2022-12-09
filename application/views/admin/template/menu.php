@@ -14,6 +14,22 @@
 </div>
 <div class="menu menu-column menu-title-gray-800 menu-state-title-primary menu-state-icon-primary menu-state-bullet-primary menu-arrow-gray-500">
     <div class="menu-item">
+        <a <?= $this->uri->segment(1) == 'pendaftaran' || $this->uri->segment(1) == '' ? 'class="menu-link active"' : 'class="menu-link"' ?> href="<?php echo site_url('pendaftaran'); ?>" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
+            <span class="menu-icon">
+                <span class="svg-icon svg-icon-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
+                        <rect y="6" width="16" height="3" rx="1.5" fill="currentColor" />
+                        <rect opacity="0.3" y="12" width="8" height="3" rx="1.5" fill="currentColor" />
+                        <rect opacity="0.3" width="12" height="3" rx="1.5" fill="currentColor" />
+                    </svg>
+                </span>
+            </span>
+            <span class="menu-title">Pendaftaran Pakar</span>
+        </a>
+    </div>
+</div>
+<div class="menu menu-column menu-title-gray-800 menu-state-title-primary menu-state-icon-primary menu-state-bullet-primary menu-arrow-gray-500">
+    <div class="menu-item">
         <a <?= $this->uri->segment(1) == 'admin' || $this->uri->segment(1) == '' ? 'class="menu-link active"' : 'class="menu-link"' ?> href="<?php echo site_url('admin'); ?>" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
             <span class="menu-icon">
                 <span class="svg-icon svg-icon-2">

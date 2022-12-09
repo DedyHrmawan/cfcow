@@ -100,28 +100,13 @@
                 <h5 class="modal-title">Kontak Kami</h5>
             </div>
             <div class="modal-body">
-                <div class="d-flex flex-column mb-8 fv-row">
-                    <label class="d-flex align-items-center fs-6 fw-bold mb-2">
-                        <span class="required">Nama Lengkap</span>
-                    </label>
-                    <input type="text" class="form-control form-control-solid" placeholder="Masukan Nama Lengkap" name="" required />
-                </div>
-                <div class="d-flex flex-column mb-8 fv-row">
-                    <label class="d-flex align-items-center fs-6 fw-bold mb-2">
-                        <span class="required">Email</span>
-                    </label>
-                    <input type="email" class="form-control form-control-solid" placeholder="Masukan Email" name="" required />
-                </div>
-                <div class="d-flex flex-column mb-8 fv-row">
-                    <label class="d-flex align-items-center fs-6 fw-bold mb-2">
-                        <span class="required">Pesan</span>
-                    </label>
-                    <textarea name="" id="" class="form-control form-control-solid" placeholder="Masukan Pesan" cols="30" rows="10" required></textarea>
-                </div>
+                <a href="mailto:mohammadalkausar@gmail.com" class="mb-6">
+                    <img src="assets/media/logos/gmail.png" class="h-20px me-2" alt="" />
+                    <span class="text-dark opacity-50 fw-bolder text-hover-primary fs-5 mb-6">mohammadalkausar@gmail.com</span>
+                </a>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-primary">Save changes</button>
             </div>
         </div>
     </div>
