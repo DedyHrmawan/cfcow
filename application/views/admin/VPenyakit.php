@@ -16,8 +16,8 @@
                             <tr class="fw-bolder text-muted">
                                 <th>No</th>
                                 <th>Nama Penyakit</th>
-                                <th>Detail Penyakit</th>
-                                <th>Saran Penyakit</th>
+                                <th width="40%">Detail Penyakit</th>
+                                <th width="35%">Saran Penyakit</th>
                                 <th class="min-w-150px">Aksi</th>
                             </tr>
                         </thead>
@@ -34,10 +34,10 @@
                                             '.$item->nama_penyakit.'
                                         </td>
                                         <td class="text-dark fw-bolder text-hover-primary fs-6">
-                                            '.$item->det_penyakit.'
+                                            '.mb_strimwidth($item->det_penyakit, 0, 250, "...").'
                                         </td>
                                         <td class="text-dark fw-bolder text-hover-primary fs-6">
-                                            '.$item->srn_penyakit.'
+                                            '.mb_strimwidth($item->srn_penyakit, 0, 250, "...").'
                                         </td>
                                         <td class="">
                                             <a href="" title="Detail Penyakit" data-bs-toggle="modal" data-bs-target="#mdl_detailPenyakit" data-id="'.$item->kode_penyakit.'" class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm mdl_detailPenyakit me-1">
