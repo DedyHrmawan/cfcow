@@ -16,8 +16,8 @@
                             <tr class="fw-bolder text-muted">
                                 <th>No</th>
                                 <th>Nama Postingan</th>
-                                <th>Detail Postingan</th>
-                                <th>Saran Postingan</th>
+                                <th width="40%">Detail Postingan</th>
+                                <th width="35%">Saran Postingan</th>
                                 <th class="min-w-150px">Aksi</th>
                             </tr>
                         </thead>
@@ -34,10 +34,10 @@
                                             '.$item->nama_post.'
                                         </td>
                                         <td class="text-dark fw-bolder text-hover-primary fs-6">
-                                            '.mb_strimwidth($item->det_post, 0, 170, "...").'
+                                            '.mb_strimwidth($item->det_post, 0, 250, "...").'
                                         </td>
                                         <td class="text-dark fw-bolder text-hover-primary fs-6">
-                                            '.mb_strimwidth($item->srn_post, 0, 120, "...").'
+                                            '.mb_strimwidth($item->srn_post, 0, 250, "...").'
                                         </td>
                                         <td class="">
                                             <a href="" title="Detail Postingan" data-bs-toggle="modal" data-bs-target="#mdl_detailPostingan" data-id="'.$item->kode_post.'" class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm mdl_detailPostingan me-1">
