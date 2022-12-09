@@ -210,6 +210,10 @@
                         <p><span id="">083565651878</p>
                     </div>
                     <div class="form-group">
+                        <label class="col-lg-4 fw-bold ">Pesan</label>
+                        <p><span id="">Ini adalah isi pesan jika ada !</p>
+                    </div>
+                    <div class="form-group">
                         <label class="col-lg-4 fw-bold ">Status</label>
                         <p>
                             <!-- <span class="badge badge-success">Diterima</span> -->
