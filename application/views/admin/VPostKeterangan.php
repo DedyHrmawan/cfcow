@@ -161,22 +161,22 @@
                         <label class="d-flex align-items-center fs-6 fw-bold mb-2">
                             <span class="required">Detail Postingan</span>
                         </label>
-                        <textarea class="form-control form-control-solid tox-target textTiny" id="editPost_det" name="post_det" cols="30" rows="10" required></textarea>
+                        <textarea class="form-control form-control-solid tox-target textTiny" id="editPost_det" name="post_det" cols="30" rows="10" ></textarea>
                     </div>
                     <div class="d-flex flex-column mb-8 fv-row">
                         <label class="d-flex align-items-center fs-6 fw-bold mb-2">
                             <span class="required">Saran Postingan</span>
                         </label>
-                        <textarea class="form-control form-control-solid tox-target textTiny" id="editPost_srn" name="post_srn" cols="30" rows="10" required></textarea>
+                        <textarea class="form-control form-control-solid tox-target textTiny" id="editPost_srn" name="post_srn" cols="30" rows="10" ></textarea>
                     </div>
 
                     <div class="d-flex flex-column mb-8 fv-row">
                         <label class="d-flex align-items-center fs-6 fw-bold mb-2 mt-2">
-                            <span class="required">Gambar</span>
+                            <span>Gambar</span>
                         </label>
                         <!-- wadah preview -->
                         <img class="m-3 mx-auto rounded" id="prevEditPostingan" alt="" style="max-width: 450px; min-width: 250px; max-height: 450px; min-height: 250;" />
-                        <input type="file" class="form-control form-control-solid" name="file" id="EditImgPostingan" onchange="previewEditPostingan();" required />
+                        <input type="file" class="form-control form-control-solid" name="file" id="EditImgPostingan" onchange="previewEditPostingan();" />
                     </div>
             </div>
 
