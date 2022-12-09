@@ -30,7 +30,7 @@
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 </head>
 
-<body id="kt_body" <?= $this->uri->segment(1) == 'bantuan' ? 'data-kt-aside-minimize="on"' : '' ?> href="<?php echo site_url('bantuan'); ?>" <?= $this->uri->segment(1) == 'login' ? 'data-kt-aside-minimize="on"' : '' ?> href="<?php echo site_url('login'); ?>" class=" header-fixed header-tablet-and-mobile-fixed toolbar-enabled toolbar-fixed aside-enabled aside-fixed" style="--kt-toolbar-height:55px;--kt-toolbar-height-tablet-and-mobile:55px">
+<body id="kt_body" <?= $this->uri->segment(1) == 'bantuan' ? 'data-kt-aside-minimize="on"' : '' ?> href="<?php echo site_url('bantuan'); ?>" <?= $this->uri->segment(1) == 'login' ? 'data-kt-aside-minimize="on"' : '' ?> href="<?php echo site_url('login'); ?>" <?= $this->uri->segment(1) == 'daftar' ? 'data-kt-aside-minimize="on"' : '' ?> href="<?php echo site_url('daftar'); ?>" class=" header-fixed header-tablet-and-mobile-fixed toolbar-enabled toolbar-fixed aside-enabled aside-fixed" style="--kt-toolbar-height:55px;--kt-toolbar-height-tablet-and-mobile:55px">
     <div class="d-flex flex-column flex-root">
         <div class="page d-flex flex-row flex-column-fluid">
             <div id="kt_aside" class="aside aside-dark aside-hoverable" data-kt-drawer="true" data-kt-drawer-name="aside" data-kt-drawer-activate="{default: true, lg: false}" data-kt-drawer-overlay="true" data-kt-drawer-width="{default:'200px', '300px': '250px'}" data-kt-drawer-direction="start" data-kt-drawer-toggle="#kt_aside_mobile_toggle">

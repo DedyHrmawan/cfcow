@@ -32,6 +32,14 @@ class Welcome extends CI_Controller
 		$this->template->admin('admin/VUbahPassword', $data);
 	}
 
+	public function Pendaftaran()
+	{		
+		$data = array(
+			'title' => 'List Pendaftaran - Sistem Pakar Sapi'
+		);
+		$this->template->admin('admin/VPendaftaran', $data);
+	}
+
 	//depan
 	public function Login()
 	{		
@@ -67,6 +75,14 @@ class Welcome extends CI_Controller
 			'title' => 'Tentang - Sistem Pakar Sapi'
 		);
 		$this->template->depan('depan/VAbout', $data);
+	}
+	
+	public function Daftar()
+	{		
+		$data = array(
+			'title' => 'Daftar - Sistem Pakar Sapi'
+		);
+		$this->template->depan('depan/VDaftar', $data);
 	}
 	
 }

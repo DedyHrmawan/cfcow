@@ -93,6 +93,8 @@ $route['pengetahuan/hapus']             = 'PengetahuanController/delete';
 //HOME
 $route['home']             = 'HomeController/home';
 
+$route['pendaftaran']             = 'Welcome/Pendaftaran';
+
 //DEPAN
 //BERANDA
 $route['beranda']               = 'BerandaController/Beranda';
@@ -116,6 +118,8 @@ $route['logout']                = 'AuthController/logout';
 $route['updatePassword']        = 'AuthController/ubahPassword';
 $route['ubahpassword']     = 'Welcome/UbahPassword';
 
+//DAFTAR
+$route['daftar']     = 'Welcome/Daftar';
 
 //BANTUAN
 $route['bantuan']     = 'Welcome/Bantuan';
