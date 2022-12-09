@@ -161,13 +161,13 @@
                         <label class="d-flex align-items-center fs-6 fw-bold mb-2">
                             <span class="required">Detail Penyakit</span>
                         </label>
-                        <textarea id="editPenyakit_det" class="form-control form-control-solid tox-target textTiny" name="det_penyakit" cols="30" rows="10" required></textarea>
+                        <textarea id="editPenyakit_det" class="form-control form-control-solid tox-target textTiny" name="det_penyakit" cols="30" rows="10"></textarea>
                     </div>
                     <div class="d-flex flex-column mb-8 fv-row">
                         <label class="d-flex align-items-center fs-6 fw-bold mb-2">
                             <span class="required">Saran Penyakit</span>
                         </label>
-                        <textarea id="editPenyakit_srn" class="form-control form-control-solid tox-target textTiny" name="srn_penyakit" cols="30" rows="10" required></textarea>
+                        <textarea id="editPenyakit_srn" class="form-control form-control-solid tox-target textTiny" name="srn_penyakit" cols="30" rows="10"></textarea>
                     </div>
 
                     <div class="d-flex flex-column mb-8 fv-row">
@@ -183,7 +183,7 @@
             <div class="modal-footer">
                 <input type="hidden" id="editPenyakit_id" name="kode_penyakit">
                 <button type="button" class="btn btn-light" data-bs-dismiss="modal">Batal</button>
-                <button type="submit" id="" class="btn btn-primary">Simpan</button>
+                <button type="submit" class="btn btn-primary">Simpan</button>
             </div>
             </form>
         </div>
