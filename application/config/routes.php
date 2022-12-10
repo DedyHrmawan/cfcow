@@ -93,7 +93,11 @@ $route['pengetahuan/hapus']             = 'PengetahuanController/delete';
 //HOME
 $route['home']             = 'HomeController/home';
 
-$route['pendaftaran']             = 'Welcome/Pendaftaran';
+$route['pendaftaran']             = 'PendaftaranController/Pendaftaran';
+$route['pendaftaran/terima']      = 'PendaftaranController/terima';
+$route['pendaftaran/tolak']       = 'PendaftaranController/tolak';
+$route['pendaftaran/hapus']       = 'PendaftaranController/hapus';
+$route['pendaftaran/ajxGet']      = 'PendaftaranController/ajxGet';
 
 //DEPAN
 //BERANDA
@@ -119,7 +123,8 @@ $route['updatePassword']        = 'AuthController/ubahPassword';
 $route['ubahpassword']     = 'Welcome/UbahPassword';
 
 //DAFTAR
-$route['daftar']     = 'Welcome/Daftar';
+$route['daftar']        = 'AuthController/Daftar';
+$route['daftar/store']  = 'AuthController/store';
 
 //BANTUAN
 $route['bantuan']     = 'Welcome/Bantuan';

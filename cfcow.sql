@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 06 Des 2022 pada 01.32
+-- Waktu pembuatan: 10 Des 2022 pada 07.56
 -- Versi server: 10.4.24-MariaDB
 -- Versi PHP: 7.4.29
 
@@ -40,7 +40,8 @@ CREATE TABLE `admin` (
 
 INSERT INTO `admin` (`id_admin`, `username`, `password`, `nama_lengkap`) VALUES
 (1, 'dangiriel', 'b93939873fd4923043b9dec975811f66', 'Geeree'),
-(3, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'Administrator');
+(3, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'Administrator'),
+(4, 'tesregis', 'efe6398127928f1b2e9ef3207fb82663', 'Hiens Ozawa');
 
 -- --------------------------------------------------------
 
@@ -206,6 +207,33 @@ INSERT INTO `kondisi` (`id`, `kondisi`, `ket`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Struktur dari tabel `pendaftaran`
+--
+
+CREATE TABLE `pendaftaran` (
+  `id_pendaftaran` int(11) NOT NULL,
+  `username` varchar(32) NOT NULL,
+  `password` varchar(32) NOT NULL,
+  `nama_lengkap` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `telepon` varchar(15) NOT NULL,
+  `pesan` text NOT NULL,
+  `dokumen` text NOT NULL,
+  `status` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `pendaftaran`
+--
+
+INSERT INTO `pendaftaran` (`id_pendaftaran`, `username`, `password`, `nama_lengkap`, `email`, `telepon`, `pesan`, `dokumen`, `status`) VALUES
+(1, 'testes', 'efe6398127928f1b2e9ef3207fb82663', 'Tes', 'testes@gg.com', '111111', 'Pesan', 'http://localhost/cfcow/assets/media/img/17116708ea6f4d154ac56ea864fb45d8.jpg', 3),
+(2, 'tesregis', 'efe6398127928f1b2e9ef3207fb82663', 'Hiens Ozawa', 'hiensprim@gmail.com', '0878599358321', 'Gaspol', 'http://localhost/cfcow/assets/media/img/f2cbc01ba8137429b701b547e8382521.jpg', 2),
+(4, 'tessukses', 'efe6398127928f1b2e9ef3207fb82663', 'Tes 2', 'tess@gmail.com', '12312312', 'text', 'http://localhost/cfcow/assets/media/img/839b1f38f7179e589bc466b35e42ed17.jpg', 3);
+
+-- --------------------------------------------------------
+
+--
 -- Struktur dari tabel `penyakit`
 --
 
@@ -222,11 +250,11 @@ CREATE TABLE `penyakit` (
 --
 
 INSERT INTO `penyakit` (`kode_penyakit`, `nama_penyakit`, `det_penyakit`, `srn_penyakit`, `gambar`) VALUES
-(7, 'Jembrana', '<p>Penyakit Jembrana adalah penyakit hewan menular pada sapi Bali yang disebabkan oleh virus. Wabah penyakit Jembrana pertama kali terjadi di Bali pada tahun 1964. Kerugian ekonomi yang ditimbulkan pada saat wabah cukup besar karena angka kesakitan dan angka kematiannya relative tinggi. Disamping itu penyakit Jembrana dapat menyerang sistem kekebalan tubuh, sehingga hewan rentan terhadap penyakit lainnya.</p>', '<p>Pencegahan penyakit Jembrana dilakukan dengan pemberian vaksin. Vaksin yang digunakan berasal dari inaktivasi suspensi limpa yang mengandung virus. Dosis yang diberikan sebanyak 3 ml/ekor secara intramuskuler dengan pemberian awal sebanyak dua kali berturut-turut dengan interval satu bulan, lalu selanjutnya diulang setiap tahun. Sapi bali yang akan diberangkatkan dari daerah tanpa kasus Jembrana ke daerah endemik harus divaksinasi tiga hari sebelum diberangkatkan dan divaksin ulang 3-4 minggu setelah vaksinasi pertama di daerah tujuan. Vaksinasi juga diberikan jika sapi berangkat dari daerah endemik ke daerah endemik lainnya. Sebuah studi pada tahun 2015 menyatakan bahwa pemberian vaksin belum mampu memberikan perlindungan terhadap infeksi eksperimental.</p>', 'http://localhost/cfcow/uploads/penyakit/21f756854091946b260ab5d930cbdffc.jpg'),
+(7, 'Jembrana', '<p>Penyakit Jembrana adalah penyakit hewan menular pada sapi Bali yang disebabkan oleh virus. Wabah penyakit Jembrana pertama kali terjadi di Bali pada tahun 1964. Kerugian ekonomi yang ditimbulkan pada saat wabah cukup besar karena angka kesakitan dan angka kematiannya relative tinggi. Disamping itu penyakit Jembrana dapat menyerang sistem kekebalan tubuh, sehingga hewan rentan terhadap penyakit lainnya.</p>', '<p>Pencegahan penyakit Jembrana dilakukan dengan pemberian vaksin. Vaksin yang digunakan berasal dari inaktivasi suspensi limpa yang mengandung virus. Dosis yang diberikan sebanyak 3 ml/ekor secara intramuskuler dengan pemberian awal sebanyak dua kali berturut-turut dengan interval satu bulan, lalu selanjutnya diulang setiap tahun. Sapi bali yang akan diberangkatkan dari daerah tanpa kasus Jembrana ke daerah endemik harus divaksinasi tiga hari sebelum diberangkatkan dan divaksin ulang 3-4 minggu setelah vaksinasi pertama di daerah tujuan. Vaksinasi juga diberikan jika sapi berangkat dari daerah endemik ke daerah endemik lainnya. Sebuah studi pada tahun 2015 menyatakan bahwa pemberian vaksin belum mampu memberikan perlindungan terhadap infeksi eksperimental.</p>', 'http://localhost/cfcow/uploads/penyakit/84285a4419a1c0af35bd807ca094c2b2.jpg'),
 (8, 'Baliziekte', '<p>Penyakit Bali (bahasa Belanda: Balische ziekte) adalah penyakit tidak menular pada banteng dan banteng domestik (sapi bali) yang disebabkan oleh reaksi alergi akibat konsumsi tumbuhan tahi ayam (Lantana camara). Tanda klinis yang dapat diamati yaitu kerusakan kulit di bagian yang jarang ditumbuhi rambut, seperti bagian wajah, telinga, punggung, perut, paha bagian dalam, skrotum, dan cermin pantat. Pada awalnya, luka akan bersifat simetris atau muncul bersamaan di sisi kanan dan kiri tubuh hewan, tetapi akan semakin meluas. Penyakit ini pertama kali dilaporkan oleh Lubberink pada tahun 1925 sebagai Balische ziekte</p>', '<p><span style=\"color: #202122; font-family: sans-serif;\"><span style=\"font-size: 14px;\">Pencegahan dan pengobatan cacing</span></span></p>\r\n<p><span style=\"color: #202122; font-family: sans-serif;\"><span style=\"font-size: 14px;\">1. Obat cacing diberikan pada pedet mulai umur 3 minggu dan secara rutin tiap 6bulan sekali.</span></span></p>\r\n<p><span style=\"color: #202122; font-family: sans-serif;\"><span style=\"font-size: 14px;\">2. Induk bunting tidak boleh diberi obat cacing karena menyebabkan keguguran.</span></span></p>\r\n<p><span style=\"color: #202122; font-family: sans-serif;\"><span style=\"font-size: 14px;\">3. Anjuran saat mengambil rumput jangan di pinggir sungai dan jangan mengambil rumput hingga ke akarnya yang baru masuk dan sakit disinfeksi dan vaksinasi deworming (6 bln sekali).</span></span></p>\r\n<p><span style=\"color: #202122; font-family: sans-serif;\"><span style=\"font-size: 14px;\">4. Obat cacing yang dianjurkan adalah dengan kandungan Albendazole Obat&nbsp;</span></span><span style=\"color: #202122; font-family: sans-serif;\"><span style=\"font-size: 14px;\">tradisional dapat dibuat dari larutan buah pinang + air dengan perbandingan 10 biji : 1 liter. (Badan litbang pertanian, 2016)</span></span></p>', 'http://localhost/cfcow/uploads/penyakit/50685991c945ba35fd695e6741cb3625.jpg'),
 (9, 'Cacingan', '<p><span style=\"color: #202122; font-family: sans-serif;\"><span style=\"font-size: 14px;\">Salah satu penyakit yang banyak menyerang ternak sapiadalah cacingan. Sistem pemeliharaan yang masih bersifat tradisional yakni dengan membiarkan </span></span><span style=\"color: #202122; font-family: sans-serif;\"><span style=\"font-size: 14px;\">ternaknya mencari pakan sendiri akan memudahkan ternak terinfestasi cacing dibandingkan sapi yang dipelihara secara modern. Jenis cacing yang banyak </span></span><span style=\"color: #202122; font-family: sans-serif;\"><span style=\"font-size: 14px;\">menginfeksi sapi secara berurutan yaitu cacing gilig, cacing daun dan cacingpita.</span></span></p>', '<p><span style=\"color: #202122; font-family: sans-serif;\"><span style=\"font-size: 14px;\">Pencegahan dan pengobatan cacing</span></span></p>\r\n<p><span style=\"color: #202122; font-family: sans-serif;\"><span style=\"font-size: 14px;\">1. Obat cacing diberikan pada pedet mulai umur 3 minggu dan secara rutin tiap 6bulan sekali.</span></span></p>\r\n<p><span style=\"color: #202122; font-family: sans-serif;\"><span style=\"font-size: 14px;\">2. Induk bunting tidak boleh diberi obat cacing karena menyebabkan keguguran.</span></span></p>\r\n<p><span style=\"color: #202122; font-family: sans-serif;\"><span style=\"font-size: 14px;\">3. Anjuran saat mengambil rumput jangan di pinggir sungai dan jangan mengambil rumput hingga ke akarnya yang baru masuk dan sakit disinfeksi dan vaksinasi deworming (6 bln sekali).</span></span></p>\r\n<p><span style=\"color: #202122; font-family: sans-serif;\"><span style=\"font-size: 14px;\">4. Obat cacing yang dianjurkan adalah dengan kandungan Albendazole Obat </span></span><span style=\"color: #202122; font-family: sans-serif;\"><span style=\"font-size: 14px;\">tradisional dapat dibuat dari larutan buah pinang + air dengan perbandingan 10 biji : 1 liter. (Badan litbang pertanian, 2016)</span></span></p>', 'http://localhost/cfcow/uploads/penyakit/f39f6921dfab3f7d10f0fd7e12991587.jpg'),
 (10, 'Corpus Luteum Persistent', '<p>Corpus Luteum Persistent</p>', '<p>Corpus Luteum Persistent</p>', 'http://localhost/cfcow/uploads/penyakit/1206fd803b4b6e2d370f75435a4f5bfd.jpg'),
-(11, 'Surra', '<p>Surra</p>', '<p>Surra</p>', 'http://localhost/cfcow/uploads/penyakit/a99629314e0acf9ab66c95fb873f97e6.jpg'),
+(11, 'Surra', '<p>Surra Detail</p>', '<p>Surra Saran</p>', 'http://localhost/cfcow/uploads/penyakit/89fd55f2ac83ce5c41cf3e73353ac8d8.jpg'),
 (12, 'Bovine Ephemeral Fever', '<p>Bovine Ephemeral Fever</p>', '<p>Bovine Ephemeral Fever</p>', 'http://localhost/cfcow/uploads/penyakit/998f2f13fc0e7ca296a1cfb5c4003365.jpg');
 
 -- --------------------------------------------------------
@@ -248,9 +276,9 @@ CREATE TABLE `post` (
 --
 
 INSERT INTO `post` (`kode_post`, `nama_post`, `det_post`, `srn_post`, `gambar`) VALUES
-(2, 'Jembrana', '<p>Jembrana</p>', '<p><strong>Jembrana</strong></p>', 'http://localhost/cfcow/uploads/post/31411a3bd23d35e5a33f96ca0914c174.jpg'),
+(2, 'Jembrana itu apa', '<p>Penyakit Jembrana adalah penyakit hewan menular pada sapi Bali yang disebabkan oleh virus. Wabah penyakit Jembrana pertama kali terjadi di Bali pada tahun 1964. Kerugian ekonomi yang ditimbulkan pada saat wabah cukup besar karena angka kesakitan dan angka kematiannya relative tinggi. Disamping itu penyakit Jembrana dapat menyerang sistem kekebalan tubuh, sehingga hewan rentan terhadap penyakit lainnya.</p>', '<p>Pencegahan penyakit Jembrana dilakukan dengan pemberian vaksin. Vaksin yang digunakan berasal dari inaktivasi suspensi limpa yang mengandung virus. Dosis yang diberikan sebanyak 3 ml/ekor secara intramuskuler dengan pemberian awal sebanyak dua kali berturut-turut dengan interval satu bulan, lalu selanjutnya diulang setiap tahun. Sapi bali yang akan diberangkatkan dari daerah tanpa kasus Jembrana ke daerah endemik harus divaksinasi tiga hari sebelum diberangkatkan dan divaksin ulang 3-4 minggu setelah vaksinasi pertama di daerah tujuan. Vaksinasi juga diberikan jika sapi berangkat dari daerah endemik ke daerah endemik lainnya. Sebuah studi pada tahun 2015 menyatakan bahwa pemberian vaksin belum mampu memberikan perlindungan terhadap infeksi eksperimental.</p>', 'http://localhost/cfcow/uploads/post/31411a3bd23d35e5a33f96ca0914c174.jpg'),
 (3, 'Baliziekte', '<p>Baliziekte</p>', '<p><strong>Baliziekte</strong></p>', 'http://localhost/cfcow/uploads/post/11ac6350eb75157cc20cdaf49c2b20df.jpg'),
-(4, 'Surra', '<p>Surra</p>', '<p>Surra</p>', 'http://localhost/cfcow/uploads/post/56d2a4134428c83f8ba0d5a8af5d8dc5.jpg');
+(4, 'Surra', '<p><span style=\"color: #202122; font-family: sans-serif;\"><span style=\"font-size: 14px;\">Pencegahan dan pengobatan cacing</span></span></p>\r\n<p><span style=\"color: #202122; font-family: sans-serif;\"><span style=\"font-size: 14px;\">1. Obat cacing diberikan pada pedet mulai umur 3 minggu dan secara rutin tiap 6bulan sekali.</span></span></p>\r\n<p><span style=\"color: #202122; font-family: sans-serif;\"><span style=\"font-size: 14px;\">2. Induk bunting tidak boleh diberi obat cacing karena menyebabkan keguguran.</span></span></p>\r\n<p><span style=\"color: #202122; font-family: sans-serif;\"><span style=\"font-size: 14px;\">3. Anjuran saat mengambil rumput jangan di pinggir sungai dan jangan mengambil rumput hingga ke akarnya yang baru masuk dan sakit disinfeksi dan vaksinasi deworming (6 bln sekali).</span></span></p>\r\n<p><span style=\"color: #202122; font-family: sans-serif;\"><span style=\"font-size: 14px;\">4. Obat cacing yang dianjurkan adalah dengan kandungan Albendazole Obat&nbsp;</span></span><span style=\"color: #202122; font-family: sans-serif;\"><span style=\"font-size: 14px;\">tradisional dapat dibuat dari larutan buah pinang + air dengan perbandingan 10 biji : 1 liter. (Badan litbang pertanian, 2016)</span></span></p>', '<p><span style=\"color: #202122; font-family: sans-serif;\"><span style=\"font-size: 14px;\">Pencegahan dan pengobatan cacing</span></span></p>\r\n<p><span style=\"color: #202122; font-family: sans-serif;\"><span style=\"font-size: 14px;\">1. Obat cacing diberikan pada pedet mulai umur 3 minggu dan secara rutin tiap 6bulan sekali.</span></span></p>\r\n<p><span style=\"color: #202122; font-family: sans-serif;\"><span style=\"font-size: 14px;\">2. Induk bunting tidak boleh diberi obat cacing karena menyebabkan keguguran.</span></span></p>\r\n<p><span style=\"color: #202122; font-family: sans-serif;\"><span style=\"font-size: 14px;\">3. Anjuran saat mengambil rumput jangan di pinggir sungai dan jangan mengambil rumput hingga ke akarnya yang baru masuk dan sakit disinfeksi dan vaksinasi deworming (6 bln sekali).</span></span></p>\r\n<p><span style=\"color: #202122; font-family: sans-serif;\"><span style=\"font-size: 14px;\">4. Obat cacing yang dianjurkan adalah dengan kandungan Albendazole Obat&nbsp;</span></span><span style=\"color: #202122; font-family: sans-serif;\"><span style=\"font-size: 14px;\">tradisional dapat dibuat dari larutan buah pinang + air dengan perbandingan 10 biji : 1 liter. (Badan litbang pertanian, 2016)</span></span></p>', 'http://localhost/cfcow/uploads/post/29194d7e28e5e2faf14a71bb7fa7645e.jpg');
 
 --
 -- Indexes for dumped tables
@@ -287,6 +315,12 @@ ALTER TABLE `kondisi`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indeks untuk tabel `pendaftaran`
+--
+ALTER TABLE `pendaftaran`
+  ADD PRIMARY KEY (`id_pendaftaran`);
+
+--
 -- Indeks untuk tabel `penyakit`
 --
 ALTER TABLE `penyakit`
@@ -306,7 +340,7 @@ ALTER TABLE `post`
 -- AUTO_INCREMENT untuk tabel `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT untuk tabel `basis_pengetahuan`
@@ -331,6 +365,12 @@ ALTER TABLE `hasil`
 --
 ALTER TABLE `kondisi`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT untuk tabel `pendaftaran`
+--
+ALTER TABLE `pendaftaran`
+  MODIFY `id_pendaftaran` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT untuk tabel `penyakit`
