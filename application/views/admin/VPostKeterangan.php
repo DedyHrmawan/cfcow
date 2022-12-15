@@ -16,38 +16,38 @@
                             <tr class="fw-bolder text-muted">
                                 <th>No</th>
                                 <th>Nama Postingan</th>
-                                <th width="40%">Detail Postingan</th>
-                                <th width="35%">Saran Postingan</th>
-                                <th class="min-w-150px">Aksi</th>
+                                <th>Detail Postingan</th>
+                                <th>Saran Postingan</th>
+                                <th width="15%">Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
                             <?php
-                                $no = 1;
-                                foreach($list as $item){
-                                    echo '
+                            $no = 1;
+                            foreach ($list as $item) {
+                                echo '
                                     <tr>
                                         <td class="text-dark fw-bolder text-hover-primary fs-6">
-                                            '.$no.'
+                                            ' . $no . '
                                         </td>
                                         <td class="text-dark fw-bolder text-hover-primary fs-6">
-                                            '.$item->nama_post.'
+                                            ' . $item->nama_post . '
                                         </td>
                                         <td class="text-dark fw-bolder text-hover-primary fs-6">
-                                            '.mb_strimwidth($item->det_post, 0, 250, "...").'
+                                            ' . mb_strimwidth($item->det_post, 0, 250, "...") . '
                                         </td>
                                         <td class="text-dark fw-bolder text-hover-primary fs-6">
-                                            '.mb_strimwidth($item->srn_post, 0, 250, "...").'
+                                            ' . mb_strimwidth($item->srn_post, 0, 250, "...") . '
                                         </td>
-                                        <td class="">
-                                            <a href="" title="Detail Postingan" data-bs-toggle="modal" data-bs-target="#mdl_detailPostingan" data-id="'.$item->kode_post.'" class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm mdl_detailPostingan me-1">
+                                        <td>
+                                            <a href="" title="Detail Postingan" data-bs-toggle="modal" data-bs-target="#mdl_detailPostingan" data-id="' . $item->kode_post . '" class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm mdl_detailPostingan me-1">
                                                 <span class="svg-icon svg-icon-muted svg-icon-2hx"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                                         <rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="currentColor" />
                                                         <rect x="11" y="17" width="7" height="2" rx="1" transform="rotate(-90 11 17)" fill="currentColor" />
                                                         <rect x="11" y="9" width="2" height="2" rx="1" transform="rotate(-90 11 9)" fill="currentColor" />
                                                     </svg></span>
                                             </a>
-                                            <a href="" title="Edit Postingan" data-bs-toggle="modal" data-bs-target="#mdl_editPostingan" data-id="'.$item->kode_post.'" class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm mdl_editPostingan m-1">
+                                            <a href="" title="Edit Postingan" data-bs-toggle="modal" data-bs-target="#mdl_editPostingan" data-id="' . $item->kode_post . '" class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm mdl_editPostingan m-1">
                                                 <span class="svg-icon svg-icon-3">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                                         <path opacity="0.3" d="M21.4 8.35303L19.241 10.511L13.485 4.755L15.643 2.59595C16.0248 2.21423 16.5426 1.99988 17.0825 1.99988C17.6224 1.99988 18.1402 2.21423 18.522 2.59595L21.4 5.474C21.7817 5.85581 21.9962 6.37355 21.9962 6.91345C21.9962 7.45335 21.7817 7.97122 21.4 8.35303ZM3.68699 21.932L9.88699 19.865L4.13099 14.109L2.06399 20.309C1.98815 20.5354 1.97703 20.7787 2.03189 21.0111C2.08674 21.2436 2.2054 21.4561 2.37449 21.6248C2.54359 21.7934 2.75641 21.9115 2.989 21.9658C3.22158 22.0201 3.4647 22.0084 3.69099 21.932H3.68699Z" fill="currentColor" />
@@ -55,7 +55,7 @@
                                                     </svg>
                                                 </span>
                                             </a>
-                                            <a href="#" title="Hapus Postingan" data-bs-toggle="modal" data-bs-target="#mdl_delPostingan" data-id="'.$item->kode_post.'" class="btn btn-icon btn-bg-light btn-active-color-primary mdl_delPostingan btn-sm m-1">
+                                            <a href="#" title="Hapus Postingan" data-bs-toggle="modal" data-bs-target="#mdl_delPostingan" data-id="' . $item->kode_post . '" class="btn btn-icon btn-bg-light btn-active-color-primary mdl_delPostingan btn-sm m-1">
                                                 <span class="svg-icon svg-icon-3">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                                         <path d="M5 9C5 8.44772 5.44772 8 6 8H18C18.5523 8 19 8.44772 19 9V18C19 19.6569 17.6569 21 16 21H8C6.34315 21 5 19.6569 5 18V9Z" fill="currentColor" />
@@ -67,9 +67,9 @@
                                         </td>
                                     </tr>
                                     ';
-                                    $no++;
-                                }
-                            ?>                            
+                                $no++;
+                            }
+                            ?>
                         </tbody>
                     </table>
                 </div>
@@ -118,6 +118,7 @@
                         <label class="d-flex align-items-center fs-6 fw-bold mb-2 mt-2">
                             <span class="required">Gambar</span>
                         </label>
+                        <p>Noted : Silahkan unggah gambar dengan format .gif/ .jpg/ .png/ .jpeg./ .bmp</p>
                         <!-- wadah preview -->
                         <img class="m-3 mx-auto rounded" id="prevAddPostingan" alt="" style="max-width: 450px; min-width: 250px; max-height: 450px; min-height: 250;" />
                         <input type="file" class="form-control form-control-solid" name="file" id="addImgPostingan" onchange="previewAddPostingan();" required />
@@ -161,19 +162,20 @@
                         <label class="d-flex align-items-center fs-6 fw-bold mb-2">
                             <span class="required">Detail Postingan</span>
                         </label>
-                        <textarea class="form-control form-control-solid tox-target textTiny" id="editPost_det" name="post_det" cols="30" rows="10" ></textarea>
+                        <textarea class="form-control form-control-solid tox-target textTiny" id="editPost_det" name="post_det" cols="30" rows="10"></textarea>
                     </div>
                     <div class="d-flex flex-column mb-8 fv-row">
                         <label class="d-flex align-items-center fs-6 fw-bold mb-2">
                             <span class="required">Saran Postingan</span>
                         </label>
-                        <textarea class="form-control form-control-solid tox-target textTiny" id="editPost_srn" name="post_srn" cols="30" rows="10" ></textarea>
+                        <textarea class="form-control form-control-solid tox-target textTiny" id="editPost_srn" name="post_srn" cols="30" rows="10"></textarea>
                     </div>
 
                     <div class="d-flex flex-column mb-8 fv-row">
                         <label class="d-flex align-items-center fs-6 fw-bold mb-2 mt-2">
                             <span>Gambar</span>
                         </label>
+                        <p>Noted : Silahkan unggah gambar dengan format .gif/ .jpg/ .png/ .jpeg./ .bmp</p>
                         <!-- wadah preview -->
                         <img class="m-3 mx-auto rounded" id="prevEditPostingan" alt="" style="max-width: 450px; min-width: 250px; max-height: 450px; min-height: 250;" />
                         <input type="file" class="form-control form-control-solid" name="file" id="EditImgPostingan" onchange="previewEditPostingan();" />

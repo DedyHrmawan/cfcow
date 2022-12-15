@@ -7,36 +7,36 @@
                 <br>
                 <div class="row g-5 g-xl-8" id="itemPost">
                     <?php
-                        foreach($list as $item){
-                            echo '
+                    foreach ($list as $item) {
+                        echo '
                             <div class="col-xl-4">
                                 <div class="card card-xl-stretch bg-light mb-xl-8">
-                                    <div class="d-flex flex-stack">
-                                        <div class="bgi-no-repeat bgi-size-cover rounded ">
-                                            <img src="'.$item->gambar.'" class="card-rounded mw-100" style="max-height: 250px; min-height: 200px;" alt="" />
+                                    <div class="d-flex flex-stack justify-content-center">
+                                        <div class="bgi-no-repeat bgi-size-cover rounded">
+                                            <img src="' . $item->gambar . '" class="card-rounded mw-100" style="max-height: 200px; min-height: 200px; max-width:250px; min-width:200px;" alt="" />
                                         </div>
                                     </div>
                                     <div class="separator"></div>
                                     <div class="card-body pt-5">
                                         <div class="text-center w-100">
                                             <div class="mb-1 mb-xxl-1">
-                                                <span class="btn btn-danger fw-bold">'.$item->nama_post.'</span>
+                                                <span class="btn btn-danger fw-bold">' . $item->nama_post . '</span>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="card-footer d-flex flex-center py-1 pb-5">
                                         <div class="d-flex align-items-center flex-shrink-0 me-7 me-lg-12">
-                                            <a href="#" class="btn btn-info mdl_detail" onclick="detail('.$item->kode_post.')" data-bs-toggle="modal" data-bs-target="#mdl_detail"><i class="fonticon-view fs-2"></i>Detail</a>
+                                            <a href="#" class="btn btn-info mdl_detail" onclick="detail(' . $item->kode_post . ')" data-bs-toggle="modal" data-bs-target="#mdl_detail"><i class="fonticon-view fs-2"></i>Detail</a>
                                         </div>
                                         <div class="d-flex align-items-center flex-shrink-0">
-                                            <a href="#" class="btn btn-primary mdl_saran" onclick="saran('.$item->kode_post.')" data-bs-toggle="modal" data-bs-target="#mdl_saran"><i class="fonticon-sun fs-2"></i>Saran</a>
+                                            <a href="#" class="btn btn-primary mdl_saran" onclick="saran(' . $item->kode_post . ')" data-bs-toggle="modal" data-bs-target="#mdl_saran"><i class="fonticon-sun fs-2"></i>Saran</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             ';
-                        }
-                    ?>                    
+                    }
+                    ?>
                 </div>
             </div>
         </div>
@@ -106,12 +106,13 @@
             data: {
                 kode_post: id
             },
-            success: res => {                
+            success: res => {
                 $("#detail_nama").html(res[0].nama_post);
                 $("#textDetail").html(res[0].det_post);
             }
         })
     }
+
     function saran(id) {
         $.ajax({
             url: "<?= site_url('keterangan/ajxGet') ?>",
@@ -120,7 +121,7 @@
             data: {
                 kode_post: id
             },
-            success: res => {                
+            success: res => {
                 $("#saran_nama").html(res[0].nama_post);
                 $("#textSaran").html(res[0].srn_post);
             }
