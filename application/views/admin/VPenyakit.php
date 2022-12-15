@@ -17,7 +17,7 @@
                                 <th>No</th>
                                 <th>Nama Penyakit</th>
                                 <th width="40%">Detail Penyakit</th>
-                                <th width="35%">Saran Penyakit</th>
+                                <th width="35%">Saran Pengobatan</th>
                                 <th class="min-w-150px">Aksi</th>
                             </tr>
                         </thead>
@@ -110,9 +110,9 @@
                     </div>
                     <div class="d-flex flex-column mb-8 fv-row">
                         <label class="d-flex align-items-center fs-6 fw-bold mb-2">
-                            <span class="required">Saran Penyakit</span>
+                            <span class="required">Saran Pengobatan</span>
                         </label>
-                        <textarea class="form-control form-control-solid tox-target textTiny" placeholder="Masukan Saran Penyakit" name="srn_penyakit" cols="30" rows="10" required></textarea>
+                        <textarea class="form-control form-control-solid tox-target textTiny" placeholder="Masukan Saran Pengobatan" name="srn_penyakit" cols="30" rows="10" required></textarea>
                     </div>
                     <div class="d-flex flex-column mb-8 fv-row">
                         <label class="d-flex align-items-center fs-6 fw-bold mb-2 mt-2">
@@ -165,7 +165,7 @@
                     </div>
                     <div class="d-flex flex-column mb-8 fv-row">
                         <label class="d-flex align-items-center fs-6 fw-bold mb-2">
-                            <span class="required">Saran Penyakit</span>
+                            <span class="required">Saran Pengobatan</span>
                         </label>
                         <textarea id="editPenyakit_srn" class="form-control form-control-solid tox-target textTiny" name="srn_penyakit" cols="30" rows="10"></textarea>
                     </div>
@@ -252,7 +252,7 @@
                         <p><span id="detailPenyakit_det"></p>
                     </div>
                     <div class="form-group">
-                        <label class="col-lg-4 fw-bold ">Saran Penyakit</label>
+                        <label class="col-lg-4 fw-bold ">Saran Pengobatan</label>
                         <p><span id="detailPenyakit_srn"></p>
                     </div>
 
