@@ -6,26 +6,32 @@
                 <div class="w-lg-600px bg-body rounded shadow-sm p-10 mx-auto">
                     <form class="form w-100" id="kt_sign_in_form" action="<?= site_url('login/auth') ?>" method="post">
                         <div class="text-center mb-10">
-                            <h1 class="text-dark mb-3">Login Pakar</h1>
-                            <div class="text-gray-400 fw-bold fs-4">Ingin mendaftar ?
-                                <a href="<?=site_url('daftar');?>" class="link-primary fw-bolder">Ajukan Permohonan</a>
-                            </div>
+                            <h1 class="text-dark mb-3">Login</h1>
                         </div>
                         <div class="fv-row mb-10">
                             <label class="form-label required fs-6 fw-bolder text-dark">Username</label>
-                            <input class="form-control form-control-lg form-control-solid" type="text" name="username" placeholder="Masukan Username" autocomplete="off" required/>
+                            <input class="form-control form-control-lg form-control-solid" type="text" name="username" placeholder="Masukan Username" autocomplete="off" required />
                         </div>
                         <div class="fv-row mb-10">
                             <div class="d-flex flex-stack mb-2">
                                 <label class="form-label required fw-bolder text-dark fs-6 mb-0">Password</label>
                             </div>
-                            <input class="form-control form-control-lg form-control-solid" type="password" name="password" placeholder="Masukan Password" autocomplete="off" required/>
+                            <input class="form-control form-control-lg form-control-solid" type="password" name="password" placeholder="Masukan Password" autocomplete="off" required />
                         </div>
                         <div class="text-center">
                             <button type="submit" id="kt_sign_in_submit" class="btn btn-lg btn-primary w-100 mb-5">
                                 <span class="indicator-label">Login</span>
                             </button>
                         </div>
+                        <div class="separator"></div>
+                        <div class="row mt-4">
+                                <div class="col text-start fs-6">
+                                    <a href="<?= site_url('daftaruser'); ?>" class="link-primary fw-bolder">Daftar Sebagai User</a>
+                                </div>
+                                <div class="col text-end fs-6">
+                                    <a href="<?= site_url('daftar'); ?>" class="link-primary fw-bolder">Daftar Sebagai Pakar</a>
+                                </div>
+                            </div>
                     </form>
                 </div>
             </div>

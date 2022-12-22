@@ -13,6 +13,8 @@
                                     <thead class="">
                                         <tr class="fw-bolder fs-5 text-dark border-bottom border-gray-200">
                                             <th class="text-center">No</th>
+                                            <th class="text-center">Nama</th>
+                                            <th class="text-center">Lokasi Peternakan</th>
                                             <th class="text-center">Tanggal</th>
                                             <th class="text-start">Penyakit</th>
                                             <th class="text-center">Nilai CF</th>
@@ -29,6 +31,12 @@
                                                 <tr>
                                                     <td class="text-dark text-center text-hover-primary fs-6">
                                                         '.$no.'
+                                                    </td>
+                                                    <td class="text-dark text-center text-hover-primary fs-6">
+                                                        Dedy Hermawan
+                                                    </td>
+                                                    <td class="text-dark text-center text-hover-primary fs-6">
+                                                        Lokasi Peternakan
                                                     </td>
                                                     <td class="text-dark text-center text-hover-primary fs-6">
                                                         '.$newDate.'

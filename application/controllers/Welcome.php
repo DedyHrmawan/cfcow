@@ -68,5 +68,30 @@ class Welcome extends CI_Controller
 		);
 		$this->template->depan('depan/VAbout', $data);
 	}
+
+	public function RegistPengguna()
+	{		
+		$data = array(
+			'title' => 'Daftar Pengguna - Sistem Pakar Sapi'
+		);
+		$this->template->depan('depan/VDaftarUser', $data);
+	}
+
+	public function Blank()
+	{		
+		$data = array(
+			'title' => 'Sistem Pakar Sapi'
+		);
+		$this->template->depan('depan/VBlank', $data);
+	}
+
+	//admin
+	public function Pengguna()
+	{		
+		$data = array(
+			'title' => 'Daftar Pengguna - Sistem Pakar Sapi'
+		);
+		$this->template->admin('admin/VUser', $data);
+	}
 	
 }
