@@ -15,10 +15,10 @@
 		html2canvas(document.querySelector("#capture"),{
 			allowTaint:true,
 			useCORS: true,
-			scale: 4
+			scale: 5
 		}).then(canvas => {               
 			var img = canvas.toDataURL("image/jpeg");
-			doc.addImage(img,'JPEG',5,25,200,0);
+			doc.addImage(img,'JPEG',25,10,155,0);
             
             doc.save(`Hasil Diagnosis - ${newDate}.pdf`);		
 		});
