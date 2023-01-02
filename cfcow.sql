@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 02 Jan 2023 pada 03.38
+-- Waktu pembuatan: 02 Jan 2023 pada 07.32
 -- Versi server: 10.4.24-MariaDB
 -- Versi PHP: 7.4.29
 
@@ -165,8 +165,8 @@ CREATE TABLE `hasil` (
   `tanggal` datetime NOT NULL DEFAULT current_timestamp(),
   `penyakit` text NOT NULL,
   `gejala` text NOT NULL,
-  `hasil_id` int(11) NOT NULL,
-  `hasil_nilai` varchar(16) NOT NULL,
+  `hasil_id` int(11) DEFAULT 0,
+  `hasil_nilai` varchar(16) DEFAULT '',
   `user_diagnosa` varchar(100) NOT NULL,
   `lokasi` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -187,7 +187,10 @@ INSERT INTO `hasil` (`id_hasil`, `tanggal`, `penyakit`, `gejala`, `hasil_id`, `h
 (9, '2023-01-02 07:12:22', 'a:1:{i:7;s:6:\"0.6400\";}', 'a:3:{i:1;s:1:\"6\";i:2;s:1:\"6\";i:3;s:1:\"2\";}', 7, '0.6400', 'giri', 'malang'),
 (10, '2023-01-02 07:12:51', 'a:4:{i:7;s:6:\"0.9638\";i:8;s:6:\"0.4800\";i:11;s:6:\"0.4800\";i:12;s:6:\"0.4800\";}', 'a:6:{i:1;s:1:\"2\";i:2;s:1:\"1\";i:3;s:1:\"3\";i:4;s:1:\"4\";i:5;s:1:\"5\";i:6;s:1:\"6\";}', 7, '0.9638', 'giri', 'malang'),
 (11, '2023-01-02 09:33:42', 'a:4:{i:7;s:6:\"0.9936\";i:8;s:6:\"0.6000\";i:11;s:6:\"0.6000\";i:12;s:6:\"0.6000\";}', 'a:4:{i:1;s:1:\"1\";i:2;s:1:\"1\";i:3;s:1:\"1\";i:4;s:1:\"1\";}', 7, '0.9936', 'giri', 'malang'),
-(12, '2023-01-02 09:36:08', 'a:4:{i:7;s:6:\"0.9974\";i:8;s:6:\"0.6000\";i:11;s:6:\"0.6000\";i:12;s:6:\"0.6000\";}', 'a:5:{i:1;s:1:\"1\";i:2;s:1:\"1\";i:3;s:1:\"1\";i:4;s:1:\"1\";i:5;s:1:\"1\";}', 7, '0.9974', 'giri', 'malang');
+(12, '2023-01-02 09:36:08', 'a:4:{i:7;s:6:\"0.9974\";i:8;s:6:\"0.6000\";i:11;s:6:\"0.6000\";i:12;s:6:\"0.6000\";}', 'a:5:{i:1;s:1:\"1\";i:2;s:1:\"1\";i:3;s:1:\"1\";i:4;s:1:\"1\";i:5;s:1:\"1\";}', 7, '0.9974', 'giri', 'malang'),
+(13, '2023-01-02 12:34:49', 'a:0:{}', 'a:1:{i:1;s:1:\"6\";}', 0, '0', 'giri', 'malang'),
+(14, '2023-01-02 12:37:05', 'a:0:{}', 'a:1:{i:1;s:1:\"6\";}', 0, '0', 'giri', 'malang'),
+(15, '2023-01-02 12:38:51', 'a:1:{i:7;s:6:\"0.9600\";}', 'a:3:{i:1;s:1:\"6\";i:2;s:1:\"1\";i:3;s:1:\"1\";}', 7, '0.9600', 'giri', 'malang');
 
 -- --------------------------------------------------------
 
@@ -399,7 +402,7 @@ ALTER TABLE `gejala`
 -- AUTO_INCREMENT untuk tabel `hasil`
 --
 ALTER TABLE `hasil`
-  MODIFY `id_hasil` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id_hasil` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT untuk tabel `kondisi`

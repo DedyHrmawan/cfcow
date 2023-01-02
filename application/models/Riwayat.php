@@ -16,8 +16,9 @@ class Riwayat extends CI_Model{
     }
     public function get($param){
         $sql = "SELECT h.*,  p.*
-        FROM hasil h, penyakit p
-        WHERE h.hasil_id = p.kode_penyakit AND
+        FROM hasil h
+        LEFT JOIN penyakit p
+        ON h.hasil_id = p.kode_penyakit WHERE
         id_hasil = $param";
         $res = $this->db->query($sql)->result();
         return $res;
