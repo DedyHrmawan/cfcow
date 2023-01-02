@@ -35,8 +35,10 @@ class Welcome extends CI_Controller
 	//depan
 	public function Login()
 	{		
-        if (isset($_SESSION['logged_in']) == TRUE) {
+        if (isset($_SESSION['logged_in']) == TRUE && $_SESSION['akses'] == 'admin') {
 			redirect('home');
+		}else if(isset($_SESSION['logged_in']) == TRUE && $_SESSION['akses'] == 'pengguna'){
+			redirect('beranda');
 		};
 		$data = array(
 			'title' => 'Login - Sistem Pakar Sapi'
@@ -86,12 +88,6 @@ class Welcome extends CI_Controller
 	}
 
 	//admin
-	public function Pengguna()
-	{		
-		$data = array(
-			'title' => 'Daftar Pengguna - Sistem Pakar Sapi'
-		);
-		$this->template->admin('admin/VUser', $data);
-	}
+	
 	
 }

@@ -8,6 +8,21 @@
                         <div class="text-center mb-10">
                             <h1 class="text-dark mb-3">Login</h1>
                         </div>
+                        <?php
+                            if ($this->session->flashdata('error_login')) {
+                                echo '
+                                <div class="card mb-5 mt-n10 mb-xl-8">
+                                    <div class="card-body card-rounded py-3">
+                                        <div class="alert alert-danger d-flex align-items-center p-5">
+                                            <div class="d-flex flex-column">
+                                                <span>' . $this->session->flashdata('error_login') . '</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                ';
+                            }
+                        ?>
                         <div class="fv-row mb-10">
                             <label class="form-label required fs-6 fw-bolder text-dark">Username</label>
                             <input class="form-control form-control-lg form-control-solid" type="text" name="username" placeholder="Masukan Username" autocomplete="off" required />

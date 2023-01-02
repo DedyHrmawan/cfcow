@@ -33,10 +33,10 @@
                                                         '.$no.'
                                                     </td>
                                                     <td class="text-dark text-center text-hover-primary fs-6">
-                                                        Dedy Hermawan
+                                                        '.$item->user_diagnosa.'
                                                     </td>
                                                     <td class="text-dark text-center text-hover-primary fs-6">
-                                                        Lokasi Peternakan
+                                                        '.$item->lokasi.'
                                                     </td>
                                                     <td class="text-dark text-center text-hover-primary fs-6">
                                                         '.$newDate.'

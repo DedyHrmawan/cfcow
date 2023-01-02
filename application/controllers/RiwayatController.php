@@ -4,6 +4,10 @@ class RiwayatController extends CI_Controller
     public function __construct()
     {
         parent::__construct();
+        if (isset($_SESSION['logged_in']) == FALSE){
+            $this->session->set_flashdata('error_login', 'Mohon login terlebih dahulu!');
+            redirect('login');
+        }
         $this->load->model('Riwayat');
     }
 

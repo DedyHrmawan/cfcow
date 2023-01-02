@@ -4,6 +4,10 @@ class DiagnosaController extends CI_Controller
     public function __construct()
     {
         parent::__construct();
+        if (isset($_SESSION['logged_in']) == FALSE){
+            $this->session->set_flashdata('error_login', 'Mohon login terlebih dahulu!');
+            redirect('login');
+        }
         $this->load->model('Gejala');
     }
 
@@ -89,7 +93,9 @@ class DiagnosaController extends CI_Controller
             'gejala'  => $inpgejala,
             'penyakit'  => $inppenyakit,
             'hasil_id'  => $idpkt1[1],
-            'hasil_nilai'  => $vlpkt1[1]
+            'hasil_nilai'  => $vlpkt1[1],
+            'user_diagnosa' => $_SESSION['nama_lengkap'],
+            'lokasi' => $_SESSION['lokasi']
         );
         $this->db->insert('hasil', $insertData);
         $id = $this->db->insert_id();

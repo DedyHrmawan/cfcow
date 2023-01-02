@@ -33,6 +33,11 @@ class User extends CI_Model{
         $res    = $this->db->get_where('pendaftaran', $filter)->result();
         return $res;
     }
+    public function getPengguna($param){
+        $filter = !empty($param['filter'])? $param['filter'] : '';
+        $res    = $this->db->get_where('user', $filter)->result();
+        return $res;
+    }    
     public function deleteDaftar($param){
         $this->db->where($param)->delete('pendaftaran');
         return true;
