@@ -5,6 +5,7 @@ class AuthController extends CI_Controller
     {
         parent::__construct();
         $this->load->model('User');   
+        $this->load->model('Pengguna');   
         $this->load->library(array('upload', 'image_lib'));  
     }
 
@@ -12,6 +13,7 @@ class AuthController extends CI_Controller
     {
         $data = $_POST;
         $user = $this->User->get(['filter' => ['username' => $data['username']]]);
+        $pengguna = $this->User->getPengguna(['filter' => ['username' => $data['username']]]);
         $pass=md5($data['password']);
         if($user != null){
             if($pass == $user[0]->password){    
@@ -23,6 +25,21 @@ class AuthController extends CI_Controller
                 );   
                 $this->session->set_userdata($newdata);                   
                 redirect('home');
+            }else{
+                $this->session->set_flashdata('error_login', 'Username atau password salah!');  
+                redirect('login');
+            }
+        }else if($pengguna != null){
+            if($pass == $pengguna[0]->password){    
+                $newdata = array(
+                    'username'      => $pengguna[0]->username,
+                    'lokasi'        => $pengguna[0]->peternakan,
+                    'nama_lengkap'  => $pengguna[0]->nama,
+                    'akses'         => 'pengguna',
+                    'logged_in' => TRUE
+                );   
+                $this->session->set_userdata($newdata);                   
+                redirect('beranda');
             }else{
                 $this->session->set_flashdata('error_login', 'Username atau password salah!');  
                 redirect('login');
@@ -95,6 +112,26 @@ class AuthController extends CI_Controller
         $this->session->set_flashdata('success_register','Permohonan Berhasil Diajukan!');
 
         redirect('daftar');
+	}
+
+    public function daftarUser()
+	{		
+        $param = $_POST;
+
+        $user = $this->User->get(['filter' => ['username' => $param['username']]]);
+        $userDaftar = $this->User->getDaftar(['filter' => ['username' => $param['username']]]);
+        $pengguna = $this->User->getPengguna(['filter' => ['username' => $param['username']]]);
+        if($user != NULL || $userDaftar != NULL || $pengguna != NULL){
+            $this->session->set_flashdata('failed_register','Username telah digunakan!');
+            redirect('daftaruser');
+        }
+
+        $param['password'] = md5($param['password']);
+
+        $this->Pengguna->insert($param);
+        $this->session->set_flashdata('success_register','Selamat, akun anda berhasil dibuat!');
+
+        redirect('daftaruser');
 	}
 
     function upload_image(){

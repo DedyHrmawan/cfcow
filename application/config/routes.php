@@ -127,8 +127,15 @@ $route['ubahpassword']     = 'Welcome/UbahPassword';
 $route['daftar']        = 'AuthController/Daftar';
 $route['daftar/store']  = 'AuthController/store';
 
-$route['daftaruser']     = 'Welcome/RegistPengguna';
-$route['pengguna']     = 'Welcome/Pengguna';
+$route['daftaruser']           = 'Welcome/RegistPengguna';
+$route['daftaruser/store']     = 'AuthController/daftarUser';
+
+//PENGGUNA
+$route['pengguna']              = 'UserController/Pengguna';
+$route['pengguna/tambah']       = 'UserController/store';
+$route['pengguna/edit']         = 'UserController/edit';
+$route['pengguna/hapus']        = 'UserController/delete';
+$route['pengguna/ajxGet']       = 'UserController/ajxGet';
 
 //BANTUAN
 $route['bantuan']     = 'Welcome/Bantuan';
