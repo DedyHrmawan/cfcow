@@ -145,24 +145,26 @@
                                         <p>Jenis Penyakit yang Diderita</p>
                                         <span class="badge fs-1 badge-light-primary"><?= $hasil[0]->nama_penyakit ?> / <?= round($hasil[0]->hasil_nilai, 2) ?> % (<?= $hasil[0]->hasil_nilai ?>)</span>
                                         <?php
-                                        $np = 0;
-                                        $penyakit = array();
-                                        foreach ($arpenyakit as $key => $value) {
-                                            $np++;
-                                            $idpkt[$np] = $key;
-                                            $nmpkt[$np] = $arpkt[$key];
-                                            $vlpkt[$np] = $value;
-                                        }
-                                        for ($ipl = 2; $ipl <= sizeOf($idpkt); $ipl++) {
-                                            if($vlpkt[$ipl] == $hasil[0]->hasil_nilai){
-                                                echo '<br><span class="badge fs-1 badge-light-primary">'.$nmpkt[$ipl].' / '.round($hasil[0]->hasil_nilai, 2).' % ('.$hasil[0]->hasil_nilai .')</span>';
-                                                array_push($penyakit, $idpkt[$ipl]);
-                                            }                             
-                                        }
+                                        if($arpenyakit != NULL){
+                                            $np = 0;
+                                            $penyakit = array();
+                                            foreach ($arpenyakit as $key => $value) {
+                                                $np++;
+                                                $idpkt[$np] = $key;
+                                                $nmpkt[$np] = $arpkt[$key];
+                                                $vlpkt[$np] = $value;
+                                            }
+                                            for ($ipl = 2; $ipl <= sizeOf($idpkt); $ipl++) {
+                                                if($vlpkt[$ipl] == $hasil[0]->hasil_nilai){
+                                                    echo '<br><span class="badge fs-1 badge-light-primary">'.$nmpkt[$ipl].' / '.round($hasil[0]->hasil_nilai, 2).' % ('.$hasil[0]->hasil_nilai .')</span>';
+                                                    array_push($penyakit, $idpkt[$ipl]);
+                                                }                             
+                                            }
+                                        }                                        
                                         ?>
                                     </div>
                                     <div class="col-md-4 justify-content-end">
-                                        <img src="<?= $hasil[0]->gambar ?>" alt="Image Hasil Diagnosa" class="img-thumbnail" style="min-width: 250px; max-width: 300px;">
+                                        <img src="<?= $hasil[0]->gambar ?>" alt="No Image" class="img-thumbnail" style="min-width: 250px; max-width: 300px;">
                                     </div>
                                 </div>
                             </div>
@@ -176,11 +178,13 @@
                     <div class="card-body">
                         <?= $hasil[0]->det_penyakit ?>
                         <?php
-                        foreach($penyakit as $item){
-                            $sql = "SELECT * FROM penyakit WHERE kode_penyakit = '$item'";
-                            $res = $this->db->query($sql)->result();
-                            echo $res[0]->det_penyakit;
-                        }
+                        if(isset($penyakit)){
+                            foreach($penyakit as $item){
+                                $sql = "SELECT * FROM penyakit WHERE kode_penyakit = '$item'";
+                                $res = $this->db->query($sql)->result();
+                                echo $res[0]->det_penyakit;
+                            }
+                        }                        
                         ?>
                     </div>
                 </div>
@@ -191,10 +195,12 @@
                     <div class="card-body">
                         <?= $hasil[0]->srn_penyakit ?>
                         <?php
-                        foreach($penyakit as $item){
-                            $sql = "SELECT * FROM penyakit WHERE kode_penyakit = '$item'";
-                            $res = $this->db->query($sql)->result();
-                            echo $res[0]->srn_penyakit;
+                        if(isset($penyakit)){
+                            foreach($penyakit as $item){
+                                $sql = "SELECT * FROM penyakit WHERE kode_penyakit = '$item'";
+                                $res = $this->db->query($sql)->result();
+                                echo $res[0]->srn_penyakit;
+                            }
                         }
                         ?>
                     </div>
@@ -205,24 +211,26 @@
                     </div>
                     <div class="card-body">
                         <?php
-                            $np = 0;
-                            foreach ($arpenyakit as $key => $value) {
-                                $np++;
-                                $idpkt[$np] = $key;
-                                $nmpkt[$np] = $arpkt[$key];
-                                $vlpkt[$np] = $value;
-                            }
-                            for ($ipl = 2; $ipl <= sizeOf($idpkt); $ipl++) {
-                                if($vlpkt[$ipl] == $hasil[0]->hasil_nilai){
-                                    echo '';
-                                }else{
-                                    echo '
-                                        <div class="d-flex align-items-center me-15">
-                                        <span class="bullet bullet-dot bg-secondary h-15px w-15px me-5"></span>'.$nmpkt[$ipl].' / '.round($vlpkt[$ipl], 2).' % ('.$vlpkt[$ipl].')
-                                        </div>
-                                    ';
-                                }                                
-                            }
+                            if($arpenyakit != NULL){
+                                $np = 0;
+                                foreach ($arpenyakit as $key => $value) {
+                                    $np++;
+                                    $idpkt[$np] = $key;
+                                    $nmpkt[$np] = $arpkt[$key];
+                                    $vlpkt[$np] = $value;
+                                }
+                                for ($ipl = 2; $ipl <= sizeOf($idpkt); $ipl++) {
+                                    if($vlpkt[$ipl] == $hasil[0]->hasil_nilai){
+                                        echo '';
+                                    }else{
+                                        echo '
+                                            <div class="d-flex align-items-center me-15">
+                                            <span class="bullet bullet-dot bg-secondary h-15px w-15px me-5"></span>'.$nmpkt[$ipl].' / '.round($vlpkt[$ipl], 2).' % ('.$vlpkt[$ipl].')
+                                            </div>
+                                        ';
+                                    }                                
+                                }
+                            }                            
                         ?>
                     </div>
                 </div>

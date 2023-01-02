@@ -26,16 +26,16 @@ class RiwayatController extends CI_Controller
 	{
         $hasil = $this->Riwayat->get($param);
 
-        foreach($hasil as $rhasil){
-            $arpenyakit = unserialize($rhasil->penyakit);
-            $argejala = unserialize($rhasil->gejala);
-        };
-
-        $np1 = 0;
-        foreach ($arpenyakit as $key1 => $value1) {
-            $np1++;
-            $idpkt1[$np1] = $key1;
-            $vlpkt1[$np1] = $value1;
+        $arpenyakit = unserialize($hasil[0]->penyakit);
+        $argejala = unserialize($hasil[0]->gejala);
+        
+        if($arpenyakit != NULL){            
+            $np1 = 0;
+            foreach ($arpenyakit as $key1 => $value1) {
+                $np1++;
+                $idpkt1[$np1] = $key1;
+                $vlpkt1[$np1] = $value1;
+            }
         }
         
         $kondisi = $this->Riwayat->getKondisi();
