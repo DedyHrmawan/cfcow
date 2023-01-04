@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 02 Jan 2023 pada 07.32
--- Versi server: 10.4.24-MariaDB
--- Versi PHP: 7.4.29
+-- Generation Time: Jan 04, 2023 at 03:18 PM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 7.4.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `admin`
+-- Table structure for table `admin`
 --
 
 CREATE TABLE `admin` (
@@ -35,7 +35,7 @@ CREATE TABLE `admin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `admin`
+-- Dumping data for table `admin`
 --
 
 INSERT INTO `admin` (`id_admin`, `username`, `password`, `nama_lengkap`) VALUES
@@ -46,7 +46,7 @@ INSERT INTO `admin` (`id_admin`, `username`, `password`, `nama_lengkap`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `basis_pengetahuan`
+-- Table structure for table `basis_pengetahuan`
 --
 
 CREATE TABLE `basis_pengetahuan` (
@@ -58,7 +58,7 @@ CREATE TABLE `basis_pengetahuan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `basis_pengetahuan`
+-- Dumping data for table `basis_pengetahuan`
 --
 
 INSERT INTO `basis_pengetahuan` (`kode_pengetahuan`, `kode_penyakit`, `kode_gejala`, `mb`, `md`) VALUES
@@ -106,7 +106,7 @@ INSERT INTO `basis_pengetahuan` (`kode_pengetahuan`, `kode_penyakit`, `kode_geja
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `gejala`
+-- Table structure for table `gejala`
 --
 
 CREATE TABLE `gejala` (
@@ -115,7 +115,7 @@ CREATE TABLE `gejala` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `gejala`
+-- Dumping data for table `gejala`
 --
 
 INSERT INTO `gejala` (`kode_gejala`, `nama_gejala`) VALUES
@@ -157,7 +157,7 @@ INSERT INTO `gejala` (`kode_gejala`, `nama_gejala`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `hasil`
+-- Table structure for table `hasil`
 --
 
 CREATE TABLE `hasil` (
@@ -172,7 +172,7 @@ CREATE TABLE `hasil` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `hasil`
+-- Dumping data for table `hasil`
 --
 
 INSERT INTO `hasil` (`id_hasil`, `tanggal`, `penyakit`, `gejala`, `hasil_id`, `hasil_nilai`, `user_diagnosa`, `lokasi`) VALUES
@@ -190,12 +190,16 @@ INSERT INTO `hasil` (`id_hasil`, `tanggal`, `penyakit`, `gejala`, `hasil_id`, `h
 (12, '2023-01-02 09:36:08', 'a:4:{i:7;s:6:\"0.9974\";i:8;s:6:\"0.6000\";i:11;s:6:\"0.6000\";i:12;s:6:\"0.6000\";}', 'a:5:{i:1;s:1:\"1\";i:2;s:1:\"1\";i:3;s:1:\"1\";i:4;s:1:\"1\";i:5;s:1:\"1\";}', 7, '0.9974', 'giri', 'malang'),
 (13, '2023-01-02 12:34:49', 'a:0:{}', 'a:1:{i:1;s:1:\"6\";}', 0, '0', 'giri', 'malang'),
 (14, '2023-01-02 12:37:05', 'a:0:{}', 'a:1:{i:1;s:1:\"6\";}', 0, '0', 'giri', 'malang'),
-(15, '2023-01-02 12:38:51', 'a:1:{i:7;s:6:\"0.9600\";}', 'a:3:{i:1;s:1:\"6\";i:2;s:1:\"1\";i:3;s:1:\"1\";}', 7, '0.9600', 'giri', 'malang');
+(15, '2023-01-02 12:38:51', 'a:1:{i:7;s:6:\"0.9600\";}', 'a:3:{i:1;s:1:\"6\";i:2;s:1:\"1\";i:3;s:1:\"1\";}', 7, '0.9600', 'giri', 'malang'),
+(27, '2023-01-03 20:54:39', 'a:0:{}', 'a:1:{i:1;s:1:\"6\";}', NULL, NULL, 'Dedy Hermawan', 'Blitar'),
+(28, '2023-01-03 20:54:57', 'a:1:{i:7;s:6:\"0.8000\";}', 'a:2:{i:1;s:1:\"6\";i:2;s:1:\"1\";}', 7, '0.8000', 'Dedy Hermawan', 'Blitar'),
+(29, '2023-01-03 20:55:17', 'a:1:{i:7;s:6:\"0.9459\";}', 'a:4:{i:1;s:1:\"6\";i:2;s:1:\"1\";i:3;s:1:\"3\";i:4;s:1:\"2\";}', 7, '0.9459', 'Dedy Hermawan', 'Blitar'),
+(30, '2023-01-03 20:56:09', 'a:2:{i:7;s:6:\"0.9459\";i:8;s:6:\"0.8000\";}', 'a:5:{i:1;s:1:\"6\";i:2;s:1:\"1\";i:3;s:1:\"3\";i:4;s:1:\"2\";i:11;s:1:\"1\";}', 7, '0.9459', 'Dedy Hermawan', 'Blitar');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `kondisi`
+-- Table structure for table `kondisi`
 --
 
 CREATE TABLE `kondisi` (
@@ -205,7 +209,7 @@ CREATE TABLE `kondisi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `kondisi`
+-- Dumping data for table `kondisi`
 --
 
 INSERT INTO `kondisi` (`id`, `kondisi`, `ket`) VALUES
@@ -219,7 +223,7 @@ INSERT INTO `kondisi` (`id`, `kondisi`, `ket`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `pendaftaran`
+-- Table structure for table `pendaftaran`
 --
 
 CREATE TABLE `pendaftaran` (
@@ -235,7 +239,7 @@ CREATE TABLE `pendaftaran` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `pendaftaran`
+-- Dumping data for table `pendaftaran`
 --
 
 INSERT INTO `pendaftaran` (`id_pendaftaran`, `username`, `password`, `nama_lengkap`, `email`, `telepon`, `pesan`, `dokumen`, `status`) VALUES
@@ -246,7 +250,7 @@ INSERT INTO `pendaftaran` (`id_pendaftaran`, `username`, `password`, `nama_lengk
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `penyakit`
+-- Table structure for table `penyakit`
 --
 
 CREATE TABLE `penyakit` (
@@ -258,21 +262,21 @@ CREATE TABLE `penyakit` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `penyakit`
+-- Dumping data for table `penyakit`
 --
 
 INSERT INTO `penyakit` (`kode_penyakit`, `nama_penyakit`, `det_penyakit`, `srn_penyakit`, `gambar`) VALUES
-(7, 'Jembrana', '<p style=\"text-align: justify;\">Penyakit Jembrana adalah penyakit hewan menular pada sapi Bali yang disebabkan oleh virus. Wabah penyakit Jembrana pertama kali terjadi di Bali pada tahun 1964. Kerugian ekonomi yang ditimbulkan pada saat wabah cukup besar karena angka kesakitan dan angka kematiannya relative tinggi. Disamping itu penyakit Jembrana dapat menyerang sistem kekebalan tubuh, sehingga hewan rentan terhadap penyakit lainnya.</p>', '<p style=\"text-align: justify;\">Pencegahan penyakit Jembrana dilakukan dengan pemberian vaksin. Vaksin yang digunakan berasal dari inaktivasi suspensi limpa yang mengandung virus. Dosis yang diberikan sebanyak 3 ml/ekor secara intramuskuler dengan pemberian awal sebanyak dua kali berturut-turut dengan interval satu bulan, lalu selanjutnya diulang setiap tahun. Sapi bali yang akan diberangkatkan dari daerah tanpa kasus Jembrana ke daerah endemik harus divaksinasi tiga hari sebelum diberangkatkan dan divaksin ulang 3-4 minggu setelah vaksinasi pertama di daerah tujuan. Vaksinasi juga diberikan jika sapi berangkat dari daerah endemik ke daerah endemik lainnya. Sebuah studi pada tahun 2015 menyatakan bahwa pemberian vaksin belum mampu memberikan perlindungan terhadap infeksi eksperimental.</p>', 'http://localhost/cfcow/uploads/penyakit/786f2573682798f93eb14b3d78e34449.jpg'),
-(8, 'Baliziekte', '<p style=\"text-align: justify;\">Penyakit Bali (bahasa Belanda: Balische ziekte) adalah penyakit tidak menular pada banteng dan banteng domestik (sapi bali) yang disebabkan oleh reaksi alergi akibat konsumsi tumbuhan tahi ayam (Lantana camara). Tanda klinis yang dapat diamati yaitu kerusakan kulit di bagian yang jarang ditumbuhi rambut, seperti bagian wajah, telinga, punggung, perut, paha bagian dalam, skrotum, dan cermin pantat. Pada awalnya, luka akan bersifat simetris atau muncul bersamaan di sisi kanan dan kiri tubuh hewan, tetapi akan semakin meluas. Penyakit ini pertama kali dilaporkan oleh Lubberink pada tahun 1925 sebagai Balische ziekte</p>', '<p style=\"text-align: justify;\">Penanganan sapi yang terlanjur terkena baliziekte dihindarkan dari sinar matahari, pada kulit yang terserang dapat diberikan salep zinc oksida, untuk mecegah terjadinya infeksi sekunder dapat diberikan antibiotik</p>', 'http://localhost/cfcow/uploads/penyakit/6770d619939b8ce64501414430b56f88.jpg'),
-(9, 'Cacingan', '<p style=\"text-align: justify;\"><span style=\"color: #202122; font-family: sans-serif;\" data-darkreader-inline-color=\"\"><span style=\"font-size: 14px;\">Salah satu penyakit yang banyak menyerang ternak sapi adalah cacingan. Sistem pemeliharaan yang masih bersifat tradisional yakni dengan membiarkan </span></span><span style=\"color: #202122; font-family: sans-serif;\" data-darkreader-inline-color=\"\"><span style=\"font-size: 14px;\">ternaknya mencari pakan sendiri akan memudahkan ternak terinfestasi cacing dibandingkan sapi yang dipelihara secara modern. Jenis cacing yang banyak </span></span><span style=\"color: #202122; font-family: sans-serif;\" data-darkreader-inline-color=\"\"><span style=\"font-size: 14px;\">menginfeksi sapi secara berurutan yaitu cacing gilig, cacing daun dan cacing pita.</span></span></p>', '<p style=\"text-align: justify;\"><span style=\"color: #202122; font-family: sans-serif;\" data-darkreader-inline-color=\"\"><span style=\"font-size: 14px;\">Pencegahan dan pengobatan cacing</span></span></p>\r\n<p style=\"text-align: justify;\">&nbsp;</p>\r\n<p style=\"text-align: justify;\"><span style=\"color: #202122; font-family: sans-serif;\" data-darkreader-inline-color=\"\"><span style=\"font-size: 14px;\">1. Obat cacing diberikan pada pedet mulai umur 3 minggu dan secara rutin tiap 6 bulan sekali.</span></span></p>\r\n<p style=\"text-align: justify;\"><span style=\"color: #202122; font-family: sans-serif;\" data-darkreader-inline-color=\"\"><span style=\"font-size: 14px;\">2. Induk bunting tidak boleh diberi obat cacing karena menyebabkan keguguran.</span></span></p>\r\n<p style=\"text-align: justify;\"><span style=\"color: #202122; font-family: sans-serif;\" data-darkreader-inline-color=\"\"><span style=\"font-size: 14px;\">3. Anjuran saat mengambil rumput jangan di pinggir sungai dan jangan mengambil rumput hingga ke akarnya yang baru masuk dan sakit disinfeksi dan vaksinasi deworming (6 bln sekali).</span></span></p>\r\n<p style=\"text-align: justify;\"><span style=\"color: #202122; font-family: sans-serif;\" data-darkreader-inline-color=\"\"><span style=\"font-size: 14px;\">4. Obat cacing yang dianjurkan adalah dengan kandungan Albendazole Obat </span></span><span style=\"color: #202122; font-family: sans-serif;\" data-darkreader-inline-color=\"\"><span style=\"font-size: 14px;\">tradisional dapat dibuat dari larutan buah pinang + air dengan perbandingan 10 biji : 1 liter. (Badan litbang pertanian, 2016)</span></span></p>', 'http://localhost/cfcow/uploads/penyakit/143d1b545ecc7d447700cc0d41c5a57c.jpg'),
-(10, 'Corpus Luteum Persistent', '<p style=\"text-align: justify;\">Corpus luteum persisten merupakan keadaan dimana corpus luteum tidak mengalami regresi dan tetap tinggal pada ovarium dalam waktu yang lama (Hariadi dkk., 2011) hal tersebut disebabkan oleh peradangan pada dinding endometrium yang mengakibatkan hormon PGF2&alpha; tidak mampu meregresi Corpus Luteum. Gejala klinis yang sering terlihat adalah anestrus dalam waktu yang lama sehingga proses reproduksi menjadi terhenti (Affandhy dkk., 2007).&nbsp;</p>', '<p style=\"text-align: justify;\">Pemijatan ovarium pada ternak yang mengalami Corpus Luteum Persistent selama kurang lebih 30 &ndash; 40 detik.</p>', 'http://localhost/cfcow/uploads/penyakit/f43f482068c5a8b3a77afc7963533dec.jpg'),
-(11, 'Surra', '<p style=\"text-align: justify;\">Surra adalah nama lokal yang diberikan peternak berbahasa Hindi (India) guna menjelaskan gejala klinik penyakit berupa kekurusan yang teramat sangat/emasiasi. Sebenarnya ada sejumlah nama lokal lainnya, tapi yang diterima secara universal adalah surra.</p>\r\n<p style=\"text-align: justify;\">Penyakit Surra adalah penyakit hewan yang disebabkan oleh infeksi protozoa, yaitu Trypanosoma evansi. Hewan yang rentan terhadap penyakit ini adalah: unta, kuda, kerbau, sapi, kambing, domba, babi, bahkan anjing. Hampir semua mamalia reseptif meskipun tidak semuanya rentan, dan burung kemungkinan juga reseptif. Surra dapat menginfeksi manusia berdasarkan hasil serologi, bahkan pewarnaan Giemsa ulas darah dari pasien di India menunjukkan positif mengandung Trypanosoma.&nbsp;</p>\r\n<p style=\"text-align: justify;\">&nbsp;</p>', '<p style=\"text-align: justify;\">Obat suramine yang pernah digunakan untuk mengatasi surra. Pemberian obat anti parasit darah.</p>', 'http://localhost/cfcow/uploads/penyakit/b27f1894cd717b138dbce0c7dbbf3e81.jpg'),
-(12, 'Bovine Ephemeral Fever', '<p style=\"text-align: justify;\">Bovine Ephemeral Fever (BEF), disebut juga sebagai Demam Tiga Hari (Three Days Sickness), merupakan penyakit sapi yang bersifat akut yang disertai demam, dengan angka kesakitan (morbiditas) yang tinggi mencapai 80%&nbsp; akan tetapi angka kematiannya (mortalitas) rendah (1-2%.)&nbsp; &nbsp;Di lapangan, kerbau dapat juga terserang secara ringan dan segera diikuti dengan serokonversi. Penyebab penyakit Bovine ephemeral fever adalah virus RNA , lebih sering terjadi pada musim hujan untuk daerah tropis dan musim panas hingga awal musim semi untuk daerah subtropis, sedangkan pada musim dingin tidak ditemui.</p>\r\n<p>&nbsp;</p>', '<p style=\"text-align: justify;\">Pengobatan yang diberikan terdiri dari berbagai kombinasi antara antipiretik, antibiotik, antihistamin dan vitamin.</p>', 'http://localhost/cfcow/uploads/penyakit/d2d6036710705abb706204c98132b946.jpg');
+(7, 'Jembrana', '<p style=\"text-align: justify;\">Penyakit Jembrana adalah penyakit hewan menular pada sapi Bali yang disebabkan oleh virus. Wabah penyakit Jembrana pertama kali terjadi di Bali pada tahun 1964. Kerugian ekonomi yang ditimbulkan pada saat wabah cukup besar karena angka kesakitan dan angka kematiannya relative tinggi. Disamping itu penyakit Jembrana dapat menyerang sistem kekebalan tubuh, sehingga hewan rentan terhadap penyakit lainnya.</p>', '<p style=\"text-align: justify;\">Pencegahan penyakit Jembrana dilakukan dengan pemberian vaksin. Vaksin yang digunakan berasal dari inaktivasi suspensi limpa yang mengandung virus. Dosis yang diberikan sebanyak 3 ml/ekor secara intramuskuler dengan pemberian awal sebanyak dua kali berturut-turut dengan interval satu bulan, lalu selanjutnya diulang setiap tahun. Sapi bali yang akan diberangkatkan dari daerah tanpa kasus Jembrana ke daerah endemik harus divaksinasi tiga hari sebelum diberangkatkan dan divaksin ulang 3-4 minggu setelah vaksinasi pertama di daerah tujuan. Vaksinasi juga diberikan jika sapi berangkat dari daerah endemik ke daerah endemik lainnya. Sebuah studi pada tahun 2015 menyatakan bahwa pemberian vaksin belum mampu memberikan perlindungan terhadap infeksi eksperimental.</p>', 'http://localhost/cfcow/uploads/penyakit/e2377322c5f265d5ecc5b75eb78a216c.jpg'),
+(8, 'Baliziekte', '<p style=\"text-align: justify;\">Penyakit Bali (bahasa Belanda: Balische ziekte) adalah penyakit tidak menular pada banteng dan banteng domestik (sapi bali) yang disebabkan oleh reaksi alergi akibat konsumsi tumbuhan tahi ayam (Lantana camara). Tanda klinis yang dapat diamati yaitu kerusakan kulit di bagian yang jarang ditumbuhi rambut, seperti bagian wajah, telinga, punggung, perut, paha bagian dalam, skrotum, dan cermin pantat. Pada awalnya, luka akan bersifat simetris atau muncul bersamaan di sisi kanan dan kiri tubuh hewan, tetapi akan semakin meluas. Penyakit ini pertama kali dilaporkan oleh Lubberink pada tahun 1925 sebagai Balische ziekte</p>', '<p style=\"text-align: justify;\">Penanganan sapi yang terlanjur terkena baliziekte dihindarkan dari sinar matahari, pada kulit yang terserang dapat diberikan salep zinc oksida, untuk mecegah terjadinya infeksi sekunder dapat diberikan antibiotik</p>', 'http://localhost/cfcow/uploads/penyakit/ab643bf803f4e371de69d5114f3a80e0.png'),
+(9, 'Cacingan', '<p style=\"text-align: justify;\"><span style=\"color: #202122; font-family: sans-serif;\" data-darkreader-inline-color=\"\"><span style=\"font-size: 14px;\">Salah satu penyakit yang banyak menyerang ternak sapi adalah cacingan. Sistem pemeliharaan yang masih bersifat tradisional yakni dengan membiarkan </span></span><span style=\"color: #202122; font-family: sans-serif;\" data-darkreader-inline-color=\"\"><span style=\"font-size: 14px;\">ternaknya mencari pakan sendiri akan memudahkan ternak terinfestasi cacing dibandingkan sapi yang dipelihara secara modern. Jenis cacing yang banyak </span></span><span style=\"color: #202122; font-family: sans-serif;\" data-darkreader-inline-color=\"\"><span style=\"font-size: 14px;\">menginfeksi sapi secara berurutan yaitu cacing gilig, cacing daun dan cacing pita.</span></span></p>', '<p style=\"text-align: justify;\"><span style=\"color: #202122; font-family: sans-serif;\" data-darkreader-inline-color=\"\"><span style=\"font-size: 14px;\">Pencegahan dan pengobatan cacing</span></span></p>\r\n<p style=\"text-align: justify;\">&nbsp;</p>\r\n<p style=\"text-align: justify;\"><span style=\"color: #202122; font-family: sans-serif;\" data-darkreader-inline-color=\"\"><span style=\"font-size: 14px;\">1. Obat cacing diberikan pada pedet mulai umur 3 minggu dan secara rutin tiap 6 bulan sekali.</span></span></p>\r\n<p style=\"text-align: justify;\"><span style=\"color: #202122; font-family: sans-serif;\" data-darkreader-inline-color=\"\"><span style=\"font-size: 14px;\">2. Induk bunting tidak boleh diberi obat cacing karena menyebabkan keguguran.</span></span></p>\r\n<p style=\"text-align: justify;\"><span style=\"color: #202122; font-family: sans-serif;\" data-darkreader-inline-color=\"\"><span style=\"font-size: 14px;\">3. Anjuran saat mengambil rumput jangan di pinggir sungai dan jangan mengambil rumput hingga ke akarnya yang baru masuk dan sakit disinfeksi dan vaksinasi deworming (6 bln sekali).</span></span></p>\r\n<p style=\"text-align: justify;\"><span style=\"color: #202122; font-family: sans-serif;\" data-darkreader-inline-color=\"\"><span style=\"font-size: 14px;\">4. Obat cacing yang dianjurkan adalah dengan kandungan Albendazole Obat </span></span><span style=\"color: #202122; font-family: sans-serif;\" data-darkreader-inline-color=\"\"><span style=\"font-size: 14px;\">tradisional dapat dibuat dari larutan buah pinang + air dengan perbandingan 10 biji : 1 liter. (Badan litbang pertanian, 2016)</span></span></p>', 'http://localhost/cfcow/uploads/penyakit/f16f1e800b51dc2f724407851e5776a3.jpg'),
+(10, 'Corpus Luteum Persistent', '<p style=\"text-align: justify;\">Corpus luteum persisten merupakan keadaan dimana corpus luteum tidak mengalami regresi dan tetap tinggal pada ovarium dalam waktu yang lama (Hariadi dkk., 2011) hal tersebut disebabkan oleh peradangan pada dinding endometrium yang mengakibatkan hormon PGF2&alpha; tidak mampu meregresi Corpus Luteum. Gejala klinis yang sering terlihat adalah anestrus dalam waktu yang lama sehingga proses reproduksi menjadi terhenti (Affandhy dkk., 2007).&nbsp;</p>', '<p style=\"text-align: justify;\">Pemijatan ovarium pada ternak yang mengalami Corpus Luteum Persistent selama kurang lebih 30 &ndash; 40 detik.</p>', 'http://localhost/cfcow/uploads/penyakit/ef9c6c43d64ac666651d1172da0779f1.jpeg'),
+(11, 'Surra', '<p style=\"text-align: justify;\">Surra adalah nama lokal yang diberikan peternak berbahasa Hindi (India) guna menjelaskan gejala klinik penyakit berupa kekurusan yang teramat sangat/emasiasi. Sebenarnya ada sejumlah nama lokal lainnya, tapi yang diterima secara universal adalah surra.</p>\r\n<p style=\"text-align: justify;\">Penyakit Surra adalah penyakit hewan yang disebabkan oleh infeksi protozoa, yaitu Trypanosoma evansi. Hewan yang rentan terhadap penyakit ini adalah: unta, kuda, kerbau, sapi, kambing, domba, babi, bahkan anjing. Hampir semua mamalia reseptif meskipun tidak semuanya rentan, dan burung kemungkinan juga reseptif. Surra dapat menginfeksi manusia berdasarkan hasil serologi, bahkan pewarnaan Giemsa ulas darah dari pasien di India menunjukkan positif mengandung Trypanosoma.&nbsp;</p>\r\n<p style=\"text-align: justify;\">&nbsp;</p>', '<p style=\"text-align: justify;\">Obat suramine yang pernah digunakan untuk mengatasi surra. Pemberian obat anti parasit darah.</p>', 'http://localhost/cfcow/uploads/penyakit/f523130c498fc4977e8261ccb0d8f493.png'),
+(12, 'Bovine Ephemeral Fever', '<p style=\"text-align: justify;\">Bovine Ephemeral Fever (BEF), disebut juga sebagai Demam Tiga Hari (Three Days Sickness), merupakan penyakit sapi yang bersifat akut yang disertai demam, dengan angka kesakitan (morbiditas) yang tinggi mencapai 80%&nbsp; akan tetapi angka kematiannya (mortalitas) rendah (1-2%.)&nbsp; &nbsp;Di lapangan, kerbau dapat juga terserang secara ringan dan segera diikuti dengan serokonversi. Penyebab penyakit Bovine ephemeral fever adalah virus RNA , lebih sering terjadi pada musim hujan untuk daerah tropis dan musim panas hingga awal musim semi untuk daerah subtropis, sedangkan pada musim dingin tidak ditemui.</p>\r\n<p>&nbsp;</p>', '<p style=\"text-align: justify;\">Pengobatan yang diberikan terdiri dari berbagai kombinasi antara antipiretik, antibiotik, antihistamin dan vitamin.</p>', 'http://localhost/cfcow/uploads/penyakit/eedba3a754f0f008e63157bcd49e69bb.jpg');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `post`
+-- Table structure for table `post`
 --
 
 CREATE TABLE `post` (
@@ -284,21 +288,21 @@ CREATE TABLE `post` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `post`
+-- Dumping data for table `post`
 --
 
 INSERT INTO `post` (`kode_post`, `nama_post`, `det_post`, `srn_post`, `gambar`) VALUES
-(2, 'Jembrana', '<p style=\"text-align: justify;\">Penyakit Jembrana adalah penyakit hewan menular pada sapi Bali yang disebabkan oleh virus. Wabah penyakit Jembrana pertama kali terjadi di Bali pada tahun 1964. Kerugian ekonomi yang ditimbulkan pada saat wabah cukup besar karena angka kesakitan dan angka kematiannya relative tinggi. Disamping itu penyakit Jembrana dapat menyerang sistem kekebalan tubuh, sehingga hewan rentan terhadap penyakit lainnya.</p>', '<p style=\"text-align: justify;\">Pencegahan penyakit Jembrana dilakukan dengan pemberian vaksin. Vaksin yang digunakan berasal dari inaktivasi suspensi limpa yang mengandung virus. Dosis yang diberikan sebanyak 3 ml/ekor secara intramuskuler dengan pemberian awal sebanyak dua kali berturut-turut dengan interval satu bulan, lalu selanjutnya diulang setiap tahun. Sapi bali yang akan diberangkatkan dari daerah tanpa kasus Jembrana ke daerah endemik harus divaksinasi tiga hari sebelum diberangkatkan dan divaksin ulang 3-4 minggu setelah vaksinasi pertama di daerah tujuan. Vaksinasi juga diberikan jika sapi berangkat dari daerah endemik ke daerah endemik lainnya. Sebuah studi pada tahun 2015 menyatakan bahwa pemberian vaksin belum mampu memberikan perlindungan terhadap infeksi eksperimental.</p>', 'http://localhost/cfcow/uploads/post/6544f2c302ee79978f1bfa4995426f30.jpg'),
-(3, 'Baliziekte', '<p style=\"text-align: justify;\">Penyakit Bali (bahasa Belanda: Balische ziekte) adalah penyakit tidak menular pada banteng dan banteng domestik (sapi bali) yang disebabkan oleh reaksi alergi akibat konsumsi tumbuhan tahi ayam (Lantana camara). Tanda klinis yang dapat diamati yaitu kerusakan kulit di bagian yang jarang ditumbuhi rambut, seperti bagian wajah, telinga, punggung, perut, paha bagian dalam, skrotum, dan cermin pantat. Pada awalnya, luka akan bersifat simetris atau muncul bersamaan di sisi kanan dan kiri tubuh hewan, tetapi akan semakin meluas. Penyakit ini pertama kali dilaporkan oleh Lubberink pada tahun 1925 sebagai Balische ziekte</p>', '<p style=\"text-align: justify;\">Penanganan sapi yang terlanjur terkena baliziekte dihindarkan dari sinar matahari, pada kulit yang terserang dapat diberikan salep zinc oksida, untuk mecegah terjadinya infeksi sekunder dapat diberikan antibiotik</p>', 'http://localhost/cfcow/uploads/post/a0206cb0447cd3caa5dee293a3102da0.jpg'),
-(4, 'Cacingan', '<p style=\"text-align: justify;\"><span style=\"--darkreader-inline-color: #c9c5be; color: #d3cfca; font-family: sans-serif;\" data-darkreader-inline-color=\"\"><span style=\"font-size: 14px;\">Salah satu penyakit yang banyak menyerang ternak sapi adalah cacingan. Sistem pemeliharaan yang masih bersifat tradisional yakni dengan membiarkan ternaknya mencari pakan sendiri akan memudahkan ternak terinfestasi cacing dibandingkan sapi yang dipelihara secara modern. Jenis cacing yang banyak menginfeksi sapi secara berurutan yaitu cacing gilig, cacing daun dan cacing pita.</span></span></p>', '<p style=\"text-align: justify;\"><span style=\"--darkreader-inline-color: #c9c5be; color: #d3cfca; font-family: sans-serif;\" data-darkreader-inline-color=\"\"><span style=\"font-size: 14px;\">Pencegahan dan pengobatan cacing</span></span></p>\r\n<p style=\"text-align: justify;\">&nbsp;</p>\r\n<p style=\"text-align: justify;\"><span style=\"--darkreader-inline-color: #c9c5be; color: #d3cfca; font-family: sans-serif;\" data-darkreader-inline-color=\"\"><span style=\"font-size: 14px;\">1. Obat cacing diberikan pada pedet mulai umur 3 minggu dan secara rutin tiap 6 bulan sekali.</span></span></p>\r\n<p style=\"text-align: justify;\"><span style=\"--darkreader-inline-color: #c9c5be; color: #d3cfca; font-family: sans-serif;\" data-darkreader-inline-color=\"\"><span style=\"font-size: 14px;\">2. Induk bunting tidak boleh diberi obat cacing karena menyebabkan keguguran.</span></span></p>\r\n<p style=\"text-align: justify;\"><span style=\"--darkreader-inline-color: #c9c5be; color: #d3cfca; font-family: sans-serif;\" data-darkreader-inline-color=\"\"><span style=\"font-size: 14px;\">3. Anjuran saat mengambil rumput jangan di pinggir sungai dan jangan mengambil rumput hingga ke akarnya yang baru masuk dan sakit disinfeksi dan vaksinasi deworming (6 bln sekali).</span></span></p>\r\n<p style=\"text-align: justify;\"><span style=\"--darkreader-inline-color: #c9c5be; color: #d3cfca; font-family: sans-serif;\" data-darkreader-inline-color=\"\"><span style=\"font-size: 14px;\">4. Obat cacing yang dianjurkan adalah dengan kandungan Albendazole Obat tradisional dapat dibuat dari larutan buah pinang + air dengan perbandingan 10 biji : 1 liter. (Badan litbang pertanian, 2016)</span></span></p>', 'http://localhost/cfcow/uploads/post/19e70d4b53673f67e983d8c7da9f94a7.jpg'),
-(5, 'Corpus Luteum Persistent', '<p style=\"text-align: justify;\">Corpus luteum persisten merupakan keadaan dimana corpus luteum tidak mengalami regresi dan tetap tinggal pada ovarium dalam waktu yang lama (Hariadi dkk., 2011) hal tersebut disebabkan oleh peradangan pada dinding endometrium yang mengakibatkan hormon PGF2&alpha; tidak mampu meregresi Corpus Luteum. Gejala klinis yang sering terlihat adalah anestrus dalam waktu yang lama sehingga proses reproduksi menjadi terhenti (Affandhy dkk., 2007).&nbsp;</p>', '<p style=\"text-align: justify;\">Pemijatan ovarium pada ternak yang mengalami Corpus Luteum Persistent selama kurang lebih 30 &ndash; 40 detik.</p>', 'http://localhost/cfcow/uploads/post/07a3590eb8b1edfce22c08cb38847db2.jpg'),
-(6, 'Surra', '<p style=\"text-align: justify;\">Surra adalah nama lokal yang diberikan peternak berbahasa Hindi (India) guna menjelaskan gejala klinik penyakit berupa kekurusan yang teramat sangat/emasiasi. Sebenarnya ada sejumlah nama lokal lainnya, tapi yang diterima secara universal adalah surra.</p>\r\n<p style=\"text-align: justify;\">Penyakit Surra adalah penyakit hewan yang disebabkan oleh infeksi protozoa, yaitu Trypanosoma evansi. Hewan yang rentan terhadap penyakit ini adalah: unta, kuda, kerbau, sapi, kambing, domba, babi, bahkan anjing. Hampir semua mamalia reseptif meskipun tidak semuanya rentan, dan burung kemungkinan juga reseptif. Surra dapat menginfeksi manusia berdasarkan hasil serologi, bahkan pewarnaan Giemsa ulas darah dari pasien di India menunjukkan positif mengandung Trypanosoma.&nbsp;</p>', '<p style=\"text-align: justify;\">Obat suramine yang pernah digunakan untuk mengatasi surra. Pemberian obat anti parasit darah.</p>', 'http://localhost/cfcow/uploads/post/ed3ead3b1a232883817cc2f062bca5e0.jpg'),
-(7, 'Bovine Ephemeral Fever (BEF)', '<p style=\"text-align: justify;\">Bovine Ephemeral Fever (BEF), disebut juga sebagai Demam Tiga Hari (Three Days Sickness), merupakan penyakit sapi yang bersifat akut yang disertai demam, dengan angka kesakitan (morbiditas) yang tinggi mencapai 80%&nbsp; akan tetapi angka kematiannya (mortalitas) rendah (1-2%.)&nbsp; &nbsp;Di lapangan, kerbau dapat juga terserang secara ringan dan segera diikuti dengan serokonversi. Penyebab penyakit Bovine ephemeral fever adalah virus RNA , lebih sering terjadi pada musim hujan untuk daerah tropis dan musim panas hingga awal musim semi untuk daerah subtropis, sedangkan pada musim dingin tidak ditemui.</p>\r\n<p style=\"text-align: justify;\">&nbsp;</p>', '<p style=\"text-align: justify;\">Pengobatan yang diberikan terdiri dari berbagai kombinasi antara antipiretik, antibiotik, antihistamin dan vitamin.</p>', 'http://localhost/cfcow/uploads/post/74ba6b98b282b20c42953f4d144d3da2.jpg');
+(2, 'Jembrana', '<p style=\"text-align: justify;\">Penyakit Jembrana adalah penyakit hewan menular pada sapi Bali yang disebabkan oleh virus. Wabah penyakit Jembrana pertama kali terjadi di Bali pada tahun 1964. Kerugian ekonomi yang ditimbulkan pada saat wabah cukup besar karena angka kesakitan dan angka kematiannya relative tinggi. Disamping itu penyakit Jembrana dapat menyerang sistem kekebalan tubuh, sehingga hewan rentan terhadap penyakit lainnya.</p>', '<p style=\"text-align: justify;\">Pencegahan penyakit Jembrana dilakukan dengan pemberian vaksin. Vaksin yang digunakan berasal dari inaktivasi suspensi limpa yang mengandung virus. Dosis yang diberikan sebanyak 3 ml/ekor secara intramuskuler dengan pemberian awal sebanyak dua kali berturut-turut dengan interval satu bulan, lalu selanjutnya diulang setiap tahun. Sapi bali yang akan diberangkatkan dari daerah tanpa kasus Jembrana ke daerah endemik harus divaksinasi tiga hari sebelum diberangkatkan dan divaksin ulang 3-4 minggu setelah vaksinasi pertama di daerah tujuan. Vaksinasi juga diberikan jika sapi berangkat dari daerah endemik ke daerah endemik lainnya. Sebuah studi pada tahun 2015 menyatakan bahwa pemberian vaksin belum mampu memberikan perlindungan terhadap infeksi eksperimental.</p>', 'http://localhost/cfcow/uploads/post/9b01234ed879a2ccc4d88b679e24cd12.jpg'),
+(3, 'Baliziekte', '<p style=\"text-align: justify;\">Penyakit Bali (bahasa Belanda: Balische ziekte) adalah penyakit tidak menular pada banteng dan banteng domestik (sapi bali) yang disebabkan oleh reaksi alergi akibat konsumsi tumbuhan tahi ayam (Lantana camara). Tanda klinis yang dapat diamati yaitu kerusakan kulit di bagian yang jarang ditumbuhi rambut, seperti bagian wajah, telinga, punggung, perut, paha bagian dalam, skrotum, dan cermin pantat. Pada awalnya, luka akan bersifat simetris atau muncul bersamaan di sisi kanan dan kiri tubuh hewan, tetapi akan semakin meluas. Penyakit ini pertama kali dilaporkan oleh Lubberink pada tahun 1925 sebagai Balische ziekte</p>', '<p style=\"text-align: justify;\">Penanganan sapi yang terlanjur terkena baliziekte dihindarkan dari sinar matahari, pada kulit yang terserang dapat diberikan salep zinc oksida, untuk mecegah terjadinya infeksi sekunder dapat diberikan antibiotik</p>', 'http://localhost/cfcow/uploads/post/b2d85d653501c70e07e4410b5134c6b4.png'),
+(4, 'Cacingan', '<p style=\"text-align: justify;\"><span style=\"--darkreader-inline-color: #c9c5be; color: #d3cfca; font-family: sans-serif;\" data-darkreader-inline-color=\"\"><span style=\"font-size: 14px;\">Salah satu penyakit yang banyak menyerang ternak sapi adalah cacingan. Sistem pemeliharaan yang masih bersifat tradisional yakni dengan membiarkan ternaknya mencari pakan sendiri akan memudahkan ternak terinfestasi cacing dibandingkan sapi yang dipelihara secara modern. Jenis cacing yang banyak menginfeksi sapi secara berurutan yaitu cacing gilig, cacing daun dan cacing pita.</span></span></p>', '<p style=\"text-align: justify;\"><span style=\"--darkreader-inline-color: #c9c5be; color: #d3cfca; font-family: sans-serif;\" data-darkreader-inline-color=\"\"><span style=\"font-size: 14px;\">Pencegahan dan pengobatan cacing</span></span></p>\r\n<p style=\"text-align: justify;\">&nbsp;</p>\r\n<p style=\"text-align: justify;\"><span style=\"--darkreader-inline-color: #c9c5be; color: #d3cfca; font-family: sans-serif;\" data-darkreader-inline-color=\"\"><span style=\"font-size: 14px;\">1. Obat cacing diberikan pada pedet mulai umur 3 minggu dan secara rutin tiap 6 bulan sekali.</span></span></p>\r\n<p style=\"text-align: justify;\"><span style=\"--darkreader-inline-color: #c9c5be; color: #d3cfca; font-family: sans-serif;\" data-darkreader-inline-color=\"\"><span style=\"font-size: 14px;\">2. Induk bunting tidak boleh diberi obat cacing karena menyebabkan keguguran.</span></span></p>\r\n<p style=\"text-align: justify;\"><span style=\"--darkreader-inline-color: #c9c5be; color: #d3cfca; font-family: sans-serif;\" data-darkreader-inline-color=\"\"><span style=\"font-size: 14px;\">3. Anjuran saat mengambil rumput jangan di pinggir sungai dan jangan mengambil rumput hingga ke akarnya yang baru masuk dan sakit disinfeksi dan vaksinasi deworming (6 bln sekali).</span></span></p>\r\n<p style=\"text-align: justify;\"><span style=\"--darkreader-inline-color: #c9c5be; color: #d3cfca; font-family: sans-serif;\" data-darkreader-inline-color=\"\"><span style=\"font-size: 14px;\">4. Obat cacing yang dianjurkan adalah dengan kandungan Albendazole Obat tradisional dapat dibuat dari larutan buah pinang + air dengan perbandingan 10 biji : 1 liter. (Badan litbang pertanian, 2016)</span></span></p>', 'http://localhost/cfcow/uploads/post/79f77a4591287656535bc66537476254.jpg'),
+(5, 'Corpus Luteum Persistent', '<p style=\"text-align: justify;\">Corpus luteum persisten merupakan keadaan dimana corpus luteum tidak mengalami regresi dan tetap tinggal pada ovarium dalam waktu yang lama (Hariadi dkk., 2011) hal tersebut disebabkan oleh peradangan pada dinding endometrium yang mengakibatkan hormon PGF2&alpha; tidak mampu meregresi Corpus Luteum. Gejala klinis yang sering terlihat adalah anestrus dalam waktu yang lama sehingga proses reproduksi menjadi terhenti (Affandhy dkk., 2007).&nbsp;</p>', '<p style=\"text-align: justify;\">Pemijatan ovarium pada ternak yang mengalami Corpus Luteum Persistent selama kurang lebih 30 &ndash; 40 detik.</p>', 'http://localhost/cfcow/uploads/post/2c18bfbea7231c4a08990a34800e26a3.jpeg'),
+(6, 'Surra', '<p style=\"text-align: justify;\">Surra adalah nama lokal yang diberikan peternak berbahasa Hindi (India) guna menjelaskan gejala klinik penyakit berupa kekurusan yang teramat sangat/emasiasi. Sebenarnya ada sejumlah nama lokal lainnya, tapi yang diterima secara universal adalah surra.</p>\r\n<p style=\"text-align: justify;\">Penyakit Surra adalah penyakit hewan yang disebabkan oleh infeksi protozoa, yaitu Trypanosoma evansi. Hewan yang rentan terhadap penyakit ini adalah: unta, kuda, kerbau, sapi, kambing, domba, babi, bahkan anjing. Hampir semua mamalia reseptif meskipun tidak semuanya rentan, dan burung kemungkinan juga reseptif. Surra dapat menginfeksi manusia berdasarkan hasil serologi, bahkan pewarnaan Giemsa ulas darah dari pasien di India menunjukkan positif mengandung Trypanosoma.&nbsp;</p>', '<p style=\"text-align: justify;\">Obat suramine yang pernah digunakan untuk mengatasi surra. Pemberian obat anti parasit darah.</p>', 'http://localhost/cfcow/uploads/post/1423a483465be29e3d120e0bfe631da6.png'),
+(7, 'Bovine Ephemeral Fever (BEF)', '<p style=\"text-align: justify;\">Bovine Ephemeral Fever (BEF), disebut juga sebagai Demam Tiga Hari (Three Days Sickness), merupakan penyakit sapi yang bersifat akut yang disertai demam, dengan angka kesakitan (morbiditas) yang tinggi mencapai 80%&nbsp; akan tetapi angka kematiannya (mortalitas) rendah (1-2%.)&nbsp; &nbsp;Di lapangan, kerbau dapat juga terserang secara ringan dan segera diikuti dengan serokonversi. Penyebab penyakit Bovine ephemeral fever adalah virus RNA , lebih sering terjadi pada musim hujan untuk daerah tropis dan musim panas hingga awal musim semi untuk daerah subtropis, sedangkan pada musim dingin tidak ditemui.</p>\r\n<p style=\"text-align: justify;\">&nbsp;</p>', '<p style=\"text-align: justify;\">Pengobatan yang diberikan terdiri dari berbagai kombinasi antara antipiretik, antibiotik, antihistamin dan vitamin.</p>', 'http://localhost/cfcow/uploads/post/263b215ccb45f2c268f19b762de3f729.jpg');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `user`
+-- Table structure for table `user`
 --
 
 CREATE TABLE `user` (
@@ -311,128 +315,129 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `user`
+-- Dumping data for table `user`
 --
 
 INSERT INTO `user` (`id_user`, `username`, `password`, `nama`, `email`, `peternakan`) VALUES
 (2, 'geeree', 'e10adc3949ba59abbe56e057f20f883e', 'giri', 'geeree@gmail.com', 'malang'),
-(3, 'kojel', 'e10adc3949ba59abbe56e057f20f883e', 'kojel', 'kojelpaok@gmail.com', 'oke');
+(3, 'kojel', 'e10adc3949ba59abbe56e057f20f883e', 'kojel', 'kojelpaok@gmail.com', 'oke'),
+(4, 'dedy', 'd5fdbe5b16111739a53f6bedc2c29e5c', 'Dedy Hermawan', 'dedyhermawan076@gmail.com', 'Blitar');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indeks untuk tabel `admin`
+-- Indexes for table `admin`
 --
 ALTER TABLE `admin`
   ADD PRIMARY KEY (`id_admin`);
 
 --
--- Indeks untuk tabel `basis_pengetahuan`
+-- Indexes for table `basis_pengetahuan`
 --
 ALTER TABLE `basis_pengetahuan`
   ADD PRIMARY KEY (`kode_pengetahuan`);
 
 --
--- Indeks untuk tabel `gejala`
+-- Indexes for table `gejala`
 --
 ALTER TABLE `gejala`
   ADD PRIMARY KEY (`kode_gejala`);
 
 --
--- Indeks untuk tabel `hasil`
+-- Indexes for table `hasil`
 --
 ALTER TABLE `hasil`
   ADD PRIMARY KEY (`id_hasil`);
 
 --
--- Indeks untuk tabel `kondisi`
+-- Indexes for table `kondisi`
 --
 ALTER TABLE `kondisi`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `pendaftaran`
+-- Indexes for table `pendaftaran`
 --
 ALTER TABLE `pendaftaran`
   ADD PRIMARY KEY (`id_pendaftaran`);
 
 --
--- Indeks untuk tabel `penyakit`
+-- Indexes for table `penyakit`
 --
 ALTER TABLE `penyakit`
   ADD PRIMARY KEY (`kode_penyakit`);
 
 --
--- Indeks untuk tabel `post`
+-- Indexes for table `post`
 --
 ALTER TABLE `post`
   ADD PRIMARY KEY (`kode_post`);
 
 --
--- Indeks untuk tabel `user`
+-- Indexes for table `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`id_user`);
 
 --
--- AUTO_INCREMENT untuk tabel yang dibuang
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT untuk tabel `admin`
+-- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
   MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT untuk tabel `basis_pengetahuan`
+-- AUTO_INCREMENT for table `basis_pengetahuan`
 --
 ALTER TABLE `basis_pengetahuan`
   MODIFY `kode_pengetahuan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 
 --
--- AUTO_INCREMENT untuk tabel `gejala`
+-- AUTO_INCREMENT for table `gejala`
 --
 ALTER TABLE `gejala`
   MODIFY `kode_gejala` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
--- AUTO_INCREMENT untuk tabel `hasil`
+-- AUTO_INCREMENT for table `hasil`
 --
 ALTER TABLE `hasil`
-  MODIFY `id_hasil` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id_hasil` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
--- AUTO_INCREMENT untuk tabel `kondisi`
+-- AUTO_INCREMENT for table `kondisi`
 --
 ALTER TABLE `kondisi`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT untuk tabel `pendaftaran`
+-- AUTO_INCREMENT for table `pendaftaran`
 --
 ALTER TABLE `pendaftaran`
   MODIFY `id_pendaftaran` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT untuk tabel `penyakit`
+-- AUTO_INCREMENT for table `penyakit`
 --
 ALTER TABLE `penyakit`
   MODIFY `kode_penyakit` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
--- AUTO_INCREMENT untuk tabel `post`
+-- AUTO_INCREMENT for table `post`
 --
 ALTER TABLE `post`
   MODIFY `kode_post` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT untuk tabel `user`
+-- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
