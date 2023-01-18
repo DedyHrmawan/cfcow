@@ -21,6 +21,8 @@ class AuthController extends CI_Controller
                     'username'      => $user[0]->username,
                     'password'      => $user[0]->password,
                     'nama_lengkap'  => $user[0]->nama_lengkap,
+                    'lokasi'        => 'admin',
+                    'akses'         => 'admin',
                     'logged_in' => TRUE
                 );   
                 $this->session->set_userdata($newdata);                   
