@@ -5,7 +5,7 @@
                 <div class="card mb-5 mt-5  mb-xl-8">
                     <div class="card-body card-rounded bg-success py-3">
                         <h3>Petunjuk Pengisian Pakar !</h3>
-                        <p>Silahkan pilih gejala yang sesuai dengan penyakit yang ada, dan berikan <b> nilai kepastian (MB & MB)</b> dengan cakupan sebagai berikut:
+                        <p>Silahkan pilih gejala yang sesuai dengan penyakit yang ada, dan berikan <b> nilai kepastian (MB & MD)</b> dengan cakupan sebagai berikut:
                         </p>
                         <br>
                         <div class="row">
@@ -25,10 +25,10 @@
                         <p>MB : Ukuran kenaikan kepercayaan (measure of increased belief) MD : Ukuran kenaikan ketidakpercayaan (measure of increased disbelief)
                         </p>
                         <h6>Contoh: </h6>
-                        <p> Jika kepercayaan <b>(MB)</b> anda terhadap gejala Mencret keputih-putihan untuk penyakit Berak Kapur adalah <b>0.8 (Hampir Pasti) </b>
-                            Dan ketidakpercayaan <b>(MD)</b> anda terhadap gejala Mencret keputih-putihan untuk penyakit Berak Kapur adalah <b>0.2 (Hampir Mungkin)</b></p>
+                        <p> Jika kepercayaan <b>(MB)</b> anda terhadap gejala Demam untuk penyakit Jembrana adalah <b>0.8 (Hampir Pasti) </b>
+                            Dan ketidakpercayaan <b>(MD)</b> anda terhadap gejala Demam untuk penyakit Jembrana adalah <b>0.2 (Hampir Mungkin)</b></p>
                         <p><b>Maka : </b>CF(Pakar) = MB – MD (0.8 - 0.2) = <b>0.6</b></p>
-                        <p>Dimana nilai kepastian anda terhadap gejala Mencret keputih-putihan untuk penyakit Berak Kapur adalah <b>0.6 (Kemungkinan Besar) </b></p>
+                        <p>Dimana nilai kepastian anda terhadap Demam untuk penyakit Jembrana adalah <b>0.6 (Kemungkinan Besar) </b></p>
                     </div>
                 </div>
                 <br>
