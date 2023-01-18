@@ -87,7 +87,7 @@
                                         </div>
                                         <div class="separator my-2"></div>
                                         <div class="menu-item px-5 my-1">
-                                            <a class="menu-link px-5">Tentang</a>
+                                            <a href="<?= site_url('tentang');?>" class="menu-link px-5">Tentang</a>
                                         </div>
                                         <div class="menu-item px-5">
                                             <a href="<?= site_url('logout') ?>" class="menu-link px-5">Logout</a>
