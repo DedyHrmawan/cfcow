@@ -42,7 +42,12 @@
                                 </h2>
                                 <div id="menu_body" class="accordion-collapse collapse show" aria-labelledby="menu" data-bs-parent="#parent_accordion">
                                     <div class="accordion-body">
-                                        ...
+                                        <ol>
+                                            <li>Langkah Pertama adalah melakukan <a href="<?= site_url('login'); ?>">Login</a> terlebih dahulu, apabila belum memiliki akun dapat melakukan <a href="<?= site_url('daftaruser'); ?>">Pendaftaran Sebagai User</a> agar bisa mengakses semua menu yang ada. </li>
+                                            <li>Apabila sudah berhasil melakukan <a href="<?= site_url('login'); ?>">Login</a> maka akan diarahkan ke menu <a href="<?= site_url('beranda'); ?>">Beranda</a> dan sudah bisa mengakses semua menu yang ada.</li>
+                                            <li>Selanjutnya silahkan klik atau tekan menu yang ingin anda masuki.</li>
+                                            <li>Menu yang anda kehendaki telah di tampilkan.</li>
+                                        </ol>
                                     </div>
                                 </div>
                             </div>
@@ -55,7 +60,16 @@
                                 </h2>
                                 <div id="diagnosa_body" class="accordion-collapse collapse" aria-labelledby="diagnosa" data-bs-parent="#parent_accordion">
                                     <div class="accordion-body">
-                                        ...
+                                        <ol>
+                                            <li>Langkah Pertama adalah melakukan <a href="<?= site_url('login'); ?>">Login</a> terlebih dahulu, apabila belum memiliki akun dapat melakukan <a href="<?= site_url('daftaruser'); ?>">Pendaftaran Sebagai User</a> agar bisa mengakses menu <a href="<?= site_url('diagnosa'); ?>">Diagnosa</a>.</li>
+                                            <li>Apabila sudah berhasil melakukan <a href="<?= site_url('login'); ?>">Login</a> maka akan diarahkan ke menu <a href="<?= site_url('beranda'); ?>">Beranda</a> kemudian pilih menu <a href="<?= site_url('diagnosa'); ?>">Diagnosa</a>.</li>
+                                            <li>Selanjutnya silahkan cari gejala yang muncul, misal sapi dengan gejala Nafsu Makan Berkurang.</li>
+                                            <li>Pilih keyakinan anda terhadap gejala tersebut.</li>
+                                            <li>Pilih salah satu keyakinan, misal Yakin.</li>
+                                            <li>Selanjutnya jika terdapat gejala lain anda dapat memilih kembali, dan mengisi seperti langkah 4 & 5.</li>
+                                            <li>Jika sudah tekan tombol Diagnosa yang ada di atas untuk melihat hasil.</li>
+                                            <li>Hasil Akan di tampilkan dan penyakit di derita dapat di ketahui.</li>
+                                        </ol>
                                     </div>
                                 </div>
                             </div>
@@ -68,7 +82,13 @@
                                 </h2>
                                 <div id="keterangan_body" class="accordion-collapse collapse" aria-labelledby="keterangan" data-bs-parent="#parent_accordion">
                                     <div class="accordion-body">
-                                        ...
+                                        <ol>
+                                            <li>Langkah Pertama adalah melakukan <a href="<?= site_url('login'); ?>">Login</a> terlebih dahulu, apabila belum memiliki akun dapat melakukan <a href="<?= site_url('daftaruser'); ?>">Pendaftaran Sebagai User</a> agar bisa mengakses menu <a href="<?= site_url('keterangan'); ?>">Keterangan</a>.</li>
+                                            <li>Apabila sudah berhasil melakukan <a href="<?= site_url('login'); ?>">Login</a> maka akan diarahkan ke menu <a href="<?= site_url('beranda'); ?>">Beranda</a> kemudian pilih menu <a href="<?= site_url('keterangan'); ?>">Keterangan</a>.</li>
+                                            <li>Selanjutnya silahkan cari penyakit yang dilihat, terdapat tombol Detail dan Saran di bawahnya.</li>
+                                            <li>Tekan tombol detail untuk melihat Detail pada penyakit, jika sudah anda dapat menutup dengan tanda(x) di atas, atau tombol Tutup di bawah.</li>
+                                            <li>Tekan tombol saran untuk melihat Saran pada penyakit, jika sudah anda dapat menutup dengan tanda(x) di atas, atau tombol Tutup di bawah.</li>
+                                        </ol>
                                     </div>
                                 </div>
                             </div>
@@ -80,7 +100,14 @@
                                 </h2>
                                 <div id="riwayat_body" class="accordion-collapse collapse" aria-labelledby="riwayat" data-bs-parent="#parent_accordion">
                                     <div class="accordion-body">
-                                        ...
+                                        <ol>
+                                            <li>Langkah Pertama adalah melakukan <a href="<?= site_url('login'); ?>">Login</a> terlebih dahulu, apabila belum memiliki akun dapat melakukan <a href="<?= site_url('daftaruser'); ?>">Pendaftaran Sebagai User</a> agar bisa mengakses menu <a href="<?= site_url('riwayat'); ?>">Riwayat</a>.</li>
+                                            <li>Apabila sudah berhasil melakukan <a href="<?= site_url('login'); ?>">Login</a> maka akan diarahkan ke menu <a href="<?= site_url('beranda'); ?>">Beranda</a> kemudian pilih menu <a href="<?= site_url('riwayat'); ?>">Riwayat</a>.</li>
+                                            <li>Selanjutnya silahkan cari riwayat yang ingin Anda lihat.</li>
+                                            <li>Tekan tombol detail untuk melihat detail riwayat.</li>
+                                            <li>Jika sudah akan di arahkan ke hasil diagnosis yang telah di lakukan.</li>
+                                            <li>Anda dapat mencetak hasil diagnosis dengan menekan tombol Cetak.</li>
+                                        </ol>
                                     </div>
                                 </div>
                             </div>
