@@ -43,9 +43,9 @@
                                 <div class="col text-start fs-6">
                                     <a href="<?= site_url('daftaruser'); ?>" class="link-primary fw-bolder">Daftar Sebagai User</a>
                                 </div>
-                                <div class="col text-end fs-6">
+                                <!-- <div class="col text-end fs-6">
                                     <a href="<?= site_url('daftar'); ?>" class="link-primary fw-bolder">Daftar Sebagai Pakar</a>
-                                </div>
+                                </div> -->
                             </div>
                     </form>
                 </div>
