@@ -12,7 +12,7 @@
         </a>
     </div>
 </div>
-<div class="menu menu-column menu-title-gray-800 menu-state-title-primary menu-state-icon-primary menu-state-bullet-primary menu-arrow-gray-500">
+<!-- <div class="menu menu-column menu-title-gray-800 menu-state-title-primary menu-state-icon-primary menu-state-bullet-primary menu-arrow-gray-500">
     <div class="menu-item">
         <a <?= $this->uri->segment(1) == 'pendaftaran' || $this->uri->segment(1) == '' ? 'class="menu-link active"' : 'class="menu-link"' ?> href="<?php echo site_url('pendaftaran'); ?>" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
             <span class="menu-icon">
@@ -27,7 +27,7 @@
             <span class="menu-title">Pendaftaran Pakar</span>
         </a>
     </div>
-</div>
+</div> -->
 <div class="menu menu-column menu-title-gray-800 menu-state-title-primary menu-state-icon-primary menu-state-bullet-primary menu-arrow-gray-500">
     <div class="menu-item">
         <a <?= $this->uri->segment(1) == 'admin' || $this->uri->segment(1) == '' ? 'class="menu-link active"' : 'class="menu-link"' ?> href="<?php echo site_url('admin'); ?>" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">

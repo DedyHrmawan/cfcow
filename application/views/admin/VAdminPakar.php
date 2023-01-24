@@ -6,7 +6,7 @@
                     <span class="card-label fw-bolder fs-3 mb-1">Admin Pakar</span>
                 </h3>
                 <div class="card-toolbar">
-                    <a href="#" class="btn btn-primary " data-bs-toggle="modal" data-bs-target="#mdl_addAdmin">Tambah Admin</a>
+                    <!-- <a href="#" class="btn btn-primary " data-bs-toggle="modal" data-bs-target="#mdl_addAdmin">Tambah Admin</a> -->
                 </div>
             </div>
             <div class="card-body py-3">
