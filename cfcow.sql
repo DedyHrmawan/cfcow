@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 04, 2023 at 03:18 PM
+-- Generation Time: Feb 06, 2023 at 10:17 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -39,9 +39,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`id_admin`, `username`, `password`, `nama_lengkap`) VALUES
-(1, 'dangiriel', 'b93939873fd4923043b9dec975811f66', 'Geeree'),
-(3, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'Administrator'),
-(4, 'tesregis', 'efe6398127928f1b2e9ef3207fb82663', 'Hiens Ozawa');
+(3, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'Administrator');
 
 -- --------------------------------------------------------
 
@@ -111,7 +109,7 @@ INSERT INTO `basis_pengetahuan` (`kode_pengetahuan`, `kode_penyakit`, `kode_geja
 
 CREATE TABLE `gejala` (
   `kode_gejala` int(11) NOT NULL,
-  `nama_gejala` varchar(50) NOT NULL
+  `nama_gejala` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -137,11 +135,11 @@ INSERT INTO `gejala` (`kode_gejala`, `nama_gejala`) VALUES
 (16, 'Bulu kusam dan berdiri'),
 (17, 'Telinga sapi tampak terkulai'),
 (18, 'Anestrus (Tidak birahi)'),
-(19, 'Corpus luteum persistent di salah satu ovarium'),
-(20, 'Patologi'),
+(19, 'Peradangan pada dinding rahim'),
+(20, 'Nyeri pada bagian tubuh tertentu'),
 (21, 'Piometra (Penumpukan nanah di alat reproduki)'),
-(22, 'Mummifikasi ( Kematian anak sapi di dalam perut in'),
-(23, 'Maserasi fetus'),
+(22, 'Mummifikasi ( Kematian anak sapi di dalam perut induk)'),
+(23, 'Maserasi janin (janin dalam kandungan membusuk dan mengalami proses penguraian dalam rahim)'),
 (24, 'Nafsu makan akan berkurang'),
 (25, 'Bulu rontok'),
 (26, 'Bagian bawah dagu dan kaki terlihat kotor'),
@@ -194,7 +192,9 @@ INSERT INTO `hasil` (`id_hasil`, `tanggal`, `penyakit`, `gejala`, `hasil_id`, `h
 (27, '2023-01-03 20:54:39', 'a:0:{}', 'a:1:{i:1;s:1:\"6\";}', NULL, NULL, 'Dedy Hermawan', 'Blitar'),
 (28, '2023-01-03 20:54:57', 'a:1:{i:7;s:6:\"0.8000\";}', 'a:2:{i:1;s:1:\"6\";i:2;s:1:\"1\";}', 7, '0.8000', 'Dedy Hermawan', 'Blitar'),
 (29, '2023-01-03 20:55:17', 'a:1:{i:7;s:6:\"0.9459\";}', 'a:4:{i:1;s:1:\"6\";i:2;s:1:\"1\";i:3;s:1:\"3\";i:4;s:1:\"2\";}', 7, '0.9459', 'Dedy Hermawan', 'Blitar'),
-(30, '2023-01-03 20:56:09', 'a:2:{i:7;s:6:\"0.9459\";i:8;s:6:\"0.8000\";}', 'a:5:{i:1;s:1:\"6\";i:2;s:1:\"1\";i:3;s:1:\"3\";i:4;s:1:\"2\";i:11;s:1:\"1\";}', 7, '0.9459', 'Dedy Hermawan', 'Blitar');
+(30, '2023-01-03 20:56:09', 'a:2:{i:7;s:6:\"0.9459\";i:8;s:6:\"0.8000\";}', 'a:5:{i:1;s:1:\"6\";i:2;s:1:\"1\";i:3;s:1:\"3\";i:4;s:1:\"2\";i:11;s:1:\"1\";}', 7, '0.9459', 'Dedy Hermawan', 'Blitar'),
+(31, '2023-01-10 00:08:26', 'a:0:{}', 'a:0:{}', NULL, NULL, 'Dedy Hermawan', 'Blitar'),
+(32, '2023-01-31 16:06:59', 'a:4:{i:7;s:6:\"0.6672\";i:8;s:6:\"0.4800\";i:11;s:6:\"0.4800\";i:12;s:6:\"0.4800\";}', 'a:2:{i:1;s:1:\"2\";i:7;s:1:\"3\";}', 7, '0.6672', 'Dedy Hermawan', 'Blitar');
 
 -- --------------------------------------------------------
 
@@ -407,7 +407,7 @@ ALTER TABLE `gejala`
 -- AUTO_INCREMENT for table `hasil`
 --
 ALTER TABLE `hasil`
-  MODIFY `id_hasil` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id_hasil` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT for table `kondisi`

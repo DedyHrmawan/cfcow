@@ -143,7 +143,7 @@
                                     <div class="col-md-8">
                                         <h1>Hasil Diagnosa</h1>
                                         <p>Jenis Penyakit yang Diderita</p>
-                                        <span class="badge fs-1 badge-light-primary"><?= $hasil[0]->nama_penyakit ?> / <?= round($hasil[0]->hasil_nilai, 2) ?> % (<?= $hasil[0]->hasil_nilai ?>)</span>
+                                        <span class="badge fs-1 badge-light-primary"><?= $hasil[0]->nama_penyakit ?> / <?= round($hasil[0]->hasil_nilai * 100, 0) ?> % (<?= $hasil[0]->hasil_nilai ?>)</span>
                                         <?php
                                         if($arpenyakit != NULL){
                                             $np = 0;
@@ -156,7 +156,7 @@
                                             }
                                             for ($ipl = 2; $ipl <= sizeOf($idpkt); $ipl++) {
                                                 if($vlpkt[$ipl] == $hasil[0]->hasil_nilai){
-                                                    echo '<br><span class="badge fs-1 badge-light-primary">'.$nmpkt[$ipl].' / '.round($hasil[0]->hasil_nilai, 2).' % ('.$hasil[0]->hasil_nilai .')</span>';
+                                                    echo '<br><span class="badge fs-1 badge-light-primary">'.$nmpkt[$ipl].' / '.round($hasil[0]->hasil_nilai * 100, 0).' % ('.$hasil[0]->hasil_nilai .')</span>';
                                                     array_push($penyakit, $idpkt[$ipl]);
                                                 }                             
                                             }
@@ -225,7 +225,7 @@
                                     }else{
                                         echo '
                                             <div class="d-flex align-items-center me-15">
-                                            <span class="bullet bullet-dot bg-secondary h-15px w-15px me-5"></span>'.$nmpkt[$ipl].' / '.round($vlpkt[$ipl], 2).' % ('.$vlpkt[$ipl].')
+                                            <span class="bullet bullet-dot bg-secondary h-15px w-15px me-5"></span>'.$nmpkt[$ipl].' / '.round($vlpkt[$ipl] * 100, 0).' % ('.$vlpkt[$ipl].')
                                             </div>
                                         ';
                                     }                                
